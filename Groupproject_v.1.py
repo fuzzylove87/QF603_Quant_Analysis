@@ -9,7 +9,6 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 from scipy import stats
-import csv
 import math
 from datetime import datetime
 import matplotlib.mlab as mlab
@@ -141,6 +140,8 @@ print('-------------------------------------------------------------------------
 print('Kurtosis of Dow Jones Ind Avg\'s Returns: ' + str(round(DJI_Kurt,8)))
 print('Kurtosis of S&P 500\'s Returns: ' + str(round(GSPC_Kurt,8)))
 
+# Additional chart
+# frequency distribution histogram overlay with normal with same mean and variance
 plt.hist([i*100 for i in DJIlogret],bins=1000,density=True,label='Dist. of Dow Jones Ind Avg Log Returns',color='b')
 
 DJI_NormMean = np.mean([i*100 for i in DJIlogret])
@@ -192,11 +193,6 @@ for (i,j) in [DJI_JBstat, GSPC_JBstat]:
               \n - Data does fits a normal distribution at 95% confidence")
     print("\n")
 
-
-
-
-
-
 # Additional metrics
 # n-day rolling correlation // drc
 drc = 120
@@ -211,14 +207,10 @@ plt.grid(True)
 plt.show()
 
 
-
-
 # Task 2.1
-
 IndexCorr=np.corrcoef(DJIlogret,GSPClogret)[1,0]
 
 # Task 2.2
-
 def tStat_MeanDiff(ret_list1,ret_list2):
     mean_ret1=np.mean(ret_list1)
     mean_ret2=np.mean(ret_list2)
@@ -260,7 +252,6 @@ elif DJI_GPSC_MeanDiff_tStat_abs <= Tstats_R:
     print("Test statistic (abs) below critical T value. DJIA mean log return is equal to SP500 mean log return.\n")
 
 # Task 2.3
-
 def F_Stat(ret_list1,ret_list2):
     var_ret1=np.var(ret_list1,ddof=1)
     var_ret2=np.var(ret_list2,ddof=1)
@@ -280,8 +271,6 @@ def F_Stat_DFs(ret_list1,ret_list2):
 
 DJI_GPSC_FStat=F_Stat(DJIlogret,GSPClogret)
 DJI_GPSC_FStat_DFs=F_Stat_DFs(DJIlogret,GSPClogret)
-
-
 
 Fstats_R = stats.f.isf(0.15/2, DJI_GPSC_FStat_DFs[0], DJI_GPSC_FStat_DFs[1])
 Fstats_L = stats.f.isf(1-0.15/2, DJI_GPSC_FStat_DFs[0], DJI_GPSC_FStat_DFs[1])
