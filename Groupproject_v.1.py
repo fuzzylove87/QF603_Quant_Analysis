@@ -12,6 +12,7 @@ from scipy import stats
 import csv
 import math
 from datetime import datetime
+import matplotlib.mlab as mlab
 
 # Task 1.1
 Oct18 = pd.read_csv('DJIA_components.csv')
@@ -139,6 +140,34 @@ print('Skewedness of S&P 500\'s Returns: ' + str(round(GSPC_Skew,8)))
 print('------------------------------------------------------------------------------')  
 print('Kurtosis of Dow Jones Ind Avg\'s Returns: ' + str(round(DJI_Kurt,8)))
 print('Kurtosis of S&P 500\'s Returns: ' + str(round(GSPC_Kurt,8)))
+
+plt.hist([i*100 for i in DJIlogret],bins=1000,density=True,label='Dist. of Dow Jones Ind Avg Log Returns',color='b')
+
+DJI_NormMean = np.mean([i*100 for i in DJIlogret])
+DJI_NormSigma = np.std([i*100 for i in DJIlogret],ddof=1)
+DJI_NormSpace = np.linspace(DJI_NormMean - 6*DJI_NormSigma, DJI_NormMean + 6*DJI_NormSigma, 8500)
+
+plt.plot(DJI_NormSpace,mlab.normpdf(DJI_NormSpace, DJI_NormMean, DJI_NormSigma),label='Normal Dist with Same Mean and Std Dev',color='k')
+plt.xlabel('Log Returns (%)')
+plt.ylabel('Probability')
+plt.legend(loc='upper left')    
+plt.grid(True)
+plt.axis([-30,15,0,0.8])
+plt.show()
+
+plt.hist([i*100 for i in GSPClogret],bins=1000,density=True,label='Dist. of S&P 500 Log Returns',color='r')
+
+GSPC_NormMean = np.mean([i*100 for i in GSPClogret])
+GSPC_NormSigma = np.std([i*100 for i in GSPClogret],ddof=1)
+GSPC_NormSpace = np.linspace(GSPC_NormMean - 6*GSPC_NormSigma, GSPC_NormMean + 6*GSPC_NormSigma, 8500)
+
+plt.plot(GSPC_NormSpace,mlab.normpdf(GSPC_NormSpace, GSPC_NormMean, GSPC_NormSigma),label='Normal Dist with Same Mean and Std Dev',color='k')
+plt.xlabel('Log Returns (%)')
+plt.ylabel('Probability')
+plt.legend(loc='upper left')
+plt.grid(True)
+plt.axis([-25,15,0,0.9])
+plt.show()
 
 # Task 1.9
 def Jarque_Beta(ret_list):
