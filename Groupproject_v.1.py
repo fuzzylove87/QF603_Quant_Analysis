@@ -164,6 +164,20 @@ for (i,j) in [DJI_JBstat, GSPC_JBstat]:
     print("\n")
 
 
+# drc //  n-day rolling correlation
+drc = 20
+F_Rho = lambda i: stats.pearsonr(DJIlogret[i-drc:i], GSPClogret[i-drc:i])
+Correl = [F_Rho(i)[0] for i in range(drc,len(DJI_close))]
+
+plt.plot(Dates[drc:len(DJI_close)],Correl, label='20-day Rolling Correlation',color='m')
+plt.xlabel('Period')
+plt.ylabel('Correlation Coefficient')
+plt.legend(loc='lower left')
+plt.grid(True)
+plt.show()
+
+
+
 # Task 2.1
 
 IndexCorr=np.corrcoef(DJIlogret,GSPClogret)[1,0]
