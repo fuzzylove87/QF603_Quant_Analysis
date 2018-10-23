@@ -9,6 +9,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
 from scipy import stats
+import csv
 import math
 from datetime import datetime
 
@@ -62,7 +63,7 @@ plt.plot(DJIlogret, label='Dow Jones Ind Avg Log Returns',color='b')
 plt.xlabel('Period')
 plt.ylabel('Log Return (%)')
 plt.legend(loc='upper left')
-plt.axis([0,8500,-0.28,0.28]) 
+plt.axis([0,8500,-0.28,0.28])
 plt.grid(True)
 plt.show()
 
@@ -221,7 +222,7 @@ def F_Stat_DFs(ret_list1,ret_list2):
     var_ret2=np.var(ret_list2,ddof=1)
     n1=len(ret_list1)
     n2=len(ret_list2)
-    if var_ret1>=var_ret2:
+    if var_ret1>var_ret2:
         return [n1-1,n2-1]
     elif var_ret1<var_ret2:
         return [n2-1,n1-1]
