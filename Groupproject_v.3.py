@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 24 11:33:56 2018
-
-@author: ykfri
-"""
-
-# -*- coding: utf-8 -*-
-"""
 Created on Sun Oct 21 18:29:41 2018
-@author: ykfri
+@author: Group F
 """
 
 from matplotlib import pyplot as plt
