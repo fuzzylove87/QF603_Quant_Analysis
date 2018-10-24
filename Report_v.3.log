@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  24 OCT 2018 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  24 OCT 2018 13:54
 entering extended mode
 **./Report_v.3.tex
 (Report_v.3.tex
@@ -684,18 +684,18 @@ Package pdftex.def Info: SP_logret.png  used on input line 60.
 <DJInorm.png, id=36, 578.16pt x 433.62pt>
 File: DJInorm.png Graphic file (type png)
 <use DJInorm.png>
-Package pdftex.def Info: DJInorm.png  used on input line 121.
+Package pdftex.def Info: DJInorm.png  used on input line 123.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
 <GSPCnorm.png, id=37, 578.16pt x 433.62pt>
 File: GSPCnorm.png Graphic file (type png)
 <use GSPCnorm.png>
-Package pdftex.def Info: GSPCnorm.png  used on input line 126.
+Package pdftex.def Info: GSPCnorm.png  used on input line 128.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [6 <./DJInorm.png> <./GSPCnorm.png>]
 <correlation.png, id=43, 578.16pt x 433.62pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
-Package pdftex.def Info: correlation.png  used on input line 141.
+Package pdftex.def Info: correlation.png  used on input line 143.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [7 <./correlation.png>] [8] (Report_v.3.aux)
 
@@ -709,7 +709,7 @@ Here is how much of TeX's memory you used:
  17123 multiletter control sequences out of 15000+200000
  9322 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,68p,826b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,6n,68p,826b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmbx9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts
@@ -721,7 +721,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
 ><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmr9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb>
-Output written on Report_v.3.pdf (8 pages, 3804589 bytes).
+Output written on Report_v.3.pdf (8 pages, 3804766 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
