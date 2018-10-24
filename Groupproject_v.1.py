@@ -34,14 +34,14 @@ Dates=[]
 for i in list(DJI['Date']):
     Dates.append(datetime.strptime(i,'%Y-%m-%d'))
 
-fig, ax1 = plt.subplots()
+fig, ax1 = plt.subplots(figsize=(8,6))
 ax2 = ax1.twinx()
 
-ax1.plot(Dates, DJI_close, color='b', label='Dow Jones Industrial Average')
+ax1.plot(Dates, DJI_close, color='b', label='Dow Jones Industrial Average',linewidth=0.5)
 ax1.set_xlabel('Year')
 ax1.set_ylabel('Dow Jones Ind Avg Price')
 
-ax2.plot(Dates, GSPC_close, color='r', label='S&P 500')
+ax2.plot(Dates, GSPC_close, color='r', label='S&P 500',linewidth=0.5)
 ax2.set_ylabel('S&P 500 Price')
 
 fig.tight_layout()
@@ -59,8 +59,9 @@ DJI_close2 = DJI_close[1:]
 DJIret = DJI_close2/DJI_close1
 DJIlogret = np.log(DJIret)
 
+plt.figure(figsize=(8,6))
 plt.plot(DJIlogret, label='Dow Jones Ind Avg Log Returns',color='b')
-plt.xlabel('Period')
+plt.xlabel('Period (t)')
 plt.ylabel('Log Return (%)')
 plt.legend(loc='upper left')
 plt.axis([0,8500,-0.28,0.28])
@@ -75,8 +76,9 @@ GSPC_close2 = GSPC_close[1:]
 GSPCret = GSPC_close2/GSPC_close1
 GSPClogret = np.log(GSPCret)
 
+plt.figure(figsize=(8,6))
 plt.plot(GSPClogret, label='S&P 500 Log Returns',color='r')
-plt.xlabel('Period')
+plt.xlabel('Period (t)')
 plt.ylabel('Log Return (%)')
 plt.legend(loc='upper left')
 plt.axis([0,8500,-0.28,0.28])
@@ -115,7 +117,7 @@ print('S&P 500 Annualised Volatility: ' + str(round(GSPCAstd,8)))
 
 # Task 1.8
 
-def Skewedness(ret_list):
+def Skewness(ret_list):
     mean_ret=np.mean(ret_list)
     std_ret=np.std(ret_list,ddof=0)
     skew_num_list=[((i-(mean_ret))**3) for i in ret_list]
@@ -127,21 +129,22 @@ def Kurtosis(ret_list):
     kurt_num_list=[((i-(mean_ret))**4) for i in ret_list]
     return np.sum(kurt_num_list)/(len(ret_list)*(std_ret**4))
 
-DJI_Skew=Skewedness(DJIlogret)
-GSPC_Skew=Skewedness(GSPClogret)
+DJI_Skew=Skewness(DJIlogret)
+GSPC_Skew=Skewness(GSPClogret)
 
 DJI_Kurt=Kurtosis(DJIlogret)
 GSPC_Kurt=Kurtosis(GSPClogret)
 
 print('------------------------------------------------------------------------------')  
-print('Skewedness of Dow Jones Ind Avg\'s Returns: ' + str(round(DJI_Skew,8)))
-print('Skewedness of S&P 500\'s Returns: ' + str(round(GSPC_Skew,8)))
+print('Skewness of Dow Jones Ind Avg\'s Returns: ' + str(round(DJI_Skew,8)))
+print('Skewness of S&P 500\'s Returns: ' + str(round(GSPC_Skew,8)))
 print('------------------------------------------------------------------------------')  
 print('Kurtosis of Dow Jones Ind Avg\'s Returns: ' + str(round(DJI_Kurt,8)))
 print('Kurtosis of S&P 500\'s Returns: ' + str(round(GSPC_Kurt,8)))
 
 # Additional chart
 # frequency distribution histogram overlay with normal with same mean and variance
+plt.figure(figsize=(8,6))
 plt.hist([i*100 for i in DJIlogret],bins=1000,density=True,label='Dist. of Dow Jones Ind Avg Log Returns',color='b')
 
 DJI_NormMean = np.mean([i*100 for i in DJIlogret])
@@ -156,6 +159,7 @@ plt.grid(True)
 plt.axis([-30,15,0,0.8])
 plt.show()
 
+plt.figure(figsize=(8,6))
 plt.hist([i*100 for i in GSPClogret],bins=1000,density=True,label='Dist. of S&P 500 Log Returns',color='r')
 
 GSPC_NormMean = np.mean([i*100 for i in GSPClogret])
@@ -172,7 +176,7 @@ plt.show()
 
 # Task 1.9
 def Jarque_Beta(ret_list):
-    JB = len(ret_list)*((Skewedness(ret_list)**2)/6 + ((Kurtosis(ret_list)-3)**2)/24)
+    JB = len(ret_list)*((Skewness(ret_list)**2)/6 + ((Kurtosis(ret_list)-3)**2)/24)
     return JB
 
 DJI_JBstat = ('Dow Jones Ind Avg', float(Jarque_Beta(DJIlogret)))
@@ -198,7 +202,7 @@ for (i,j) in [DJI_JBstat, GSPC_JBstat]:
 drc = 120
 F_Rho = lambda i: stats.pearsonr(DJIlogret[i-drc:i], GSPClogret[i-drc:i])
 Correl = [F_Rho(i)[0] for i in range(drc,len(DJI_close))]
-plt.figure(figsize=(12,10))
+plt.figure(figsize=(8,6))
 plt.plot(Dates[drc:len(DJI_close)],Correl, label='252-day Rolling Correlation',color='m')
 plt.xlabel('Period')
 plt.ylabel('Correlation Coefficient')

@@ -6,6 +6,9 @@
 \usepackage{graphicx}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{setspace}
+\usepackage[margin=1.15in]{geometry}
+\setlength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
 
 \title{QF603 Group Mini-Project 1}
 
@@ -16,21 +19,20 @@
 \begin{document}
 \maketitle
 
-%\begin{abstract}
-%Enter a sh ort summary here. What topic do you want to investigate and why? What experiment did you perform? What were your main results and conclusion?
-%\end{abstract} 
+\begin{abstract}
+In this report, we examined the S\&P500 and Dow Jones Industrial Average (``DJIA'') indices. Specifically, we studied the distribution of their returns as well as the correlation between those returns. The conclusion from our research is that the daily log returns of both the S\&P500 and the DJIA are not normally distributed. Also, we noted that although both indices are highly correlated in the long run, there are periods where the correlation weakens.
+\end{abstract} 
 
-\vspace{10mm}
 \section{Task 1}
 \label{sec:introduction}
 
 \subsection{Verification of Dow Jones index}
 \setstretch{1.4}
-The value of the DJIA index per our calculations is 25,379.45, and the reported value of the index is also 25,379.45 (source: Bloomberg). There is a miniscule difference of $1.183x10^5\%$ which can be considered a rounding error. Therefore, the closing price of the DJIA index reported by Bloomberg on the 18th of October 2018 is not different from the calculated value.
+The value of the DJIA index per our calculations is 25,379.45, and the reported value of the index is also 25,379.45 (source: Bloomberg). There is a miniscule difference of $1.183\cdot10^5\%$ which can be considered a rounding error. Therefore, the closing price of the DJIA index reported by Bloomberg on the 18th of October 2018 is not different from the calculated value.
 
 
 \subsection{Findings about S\&P 500}
-The popular S\&P 500(also known as "S\&P"), known in full as the Standard \& Poor’s 500, once took humbler forms. First called “The Composite Index”, the initial form of the S\&P tracked only a handful of stocks when Poor’s Publishing introduced it in 1923. The index saw its number of tracked stocks increase to 90 in 1926, and in 1941, Poor’s Publishing merged with Standard Statistics to form Standard \& Poor’s Corporation. It was only until 4 March 1957 that the index saw its number of tracked stocks increase to 500 and its name changed to the “S\&P 500” that we are all more familiar with. Only a handful of the S\&P’s original members, such as Coca-Cola, Pfizer and PepsiCo are still in the index today.
+The popular S\&P 500(also known as ``S\&P''), known in full as the Standard \& Poor’s 500, once took humbler forms. First called “The Composite Index”, the initial form of the S\&P tracked only a handful of stocks when Poor’s Publishing introduced it in 1923. The index saw its number of tracked stocks increase to 90 in 1926, and in 1941, Poor’s Publishing merged with Standard Statistics to form Standard \& Poor’s Corporation. It was only until 4 March 1957 that the index saw its number of tracked stocks increase to 500 and its name changed to the “S\&P 500” that we are all more familiar with. Only a handful of the S\&P’s original members, such as Coca-Cola, Pfizer and PepsiCo are still in the index today.
 
 Unlike the older Dow Jones Industrial Average (also known as “the Dow”), which assigns index component weights by price, the S\&P weighs its components by market capitalisation. It is for this reason, amongst many others, that the S\&P is sometimes regarded as being more representative of the U.S. equity market. The S\&P’s superior breadth (the S\&P tracks 505 stocks compared to the Dow’s 30) and depth (S\&P components make up 85\% of U.S. equity market capitalisation compared to the Dow’s 24\%) of coverage compared to the Dow’s are often also other pull factors for institutional investors. It is also noteworthy that all of the Dow’s 30 components are also included in the S\&P, so investors seeking a broader version of Dow may consider the S\&P as one of their viable options.
 
@@ -39,7 +41,8 @@ The S\&P’s price is computed by simply dividing the sum of the weighted prices
 \subsection{Time series of the two indexes}
 
 \begin{figure}[h]
-	\includegraphics[width=\linewidth]{time_series.png}
+	\centering
+	\includegraphics[width=0.8\linewidth]{time_series.png}
 	\caption{Time series of Dow Jones and S\%P 500 indexes}
 \end{figure}
 
@@ -48,11 +51,13 @@ The S\&P’s price is computed by simply dividing the sum of the weighted prices
 \subsection{Chart of daily log returns}
 
 \begin{figure}[h!]
-	\includegraphics[width=\linewidth]{DJI_logret.png}
+	\centering
+	\includegraphics[width=0.8\linewidth]{DJI_logret.png}
 	\caption{Time series of Dow Jones Index log returns}
 \end{figure}
 \begin{figure}[h!]
-	\includegraphics[width=\linewidth]{SP_logret.png}
+	\centering
+	\includegraphics[width=0.8\linewidth]{SP_logret.png}
 	\caption{Time series of S\&P 500 log returns}
 \end{figure}
 
@@ -71,7 +76,7 @@ Annualized volatility of Dow Jones Index : 17.4493\% \linebreak
 Annualized log return of S\&P 500 Index : 8.1597\% \linebreak 
 Annualized volatility of S\&P 500 Index : 17.8570\% \linebreak 
 \end{flushleft}
-\vspace{-5mm}
+
 We use the additive feature of log returns to compute the annualized log return of Dow Jones and S\&P index. 
 
 We recognize that the S\&P index has a superior breadth and depth of coverage compared to the Dow. Therefore, we conclude firstly, that the annualized log return of US stock market is approximately equal to the S\&P’s (at 8.16%).
@@ -81,17 +86,17 @@ The annualized log returns of the Dow is about 0.7050\% higher than the S\&P’s
 
 \subsection{Sample skewness and sample kurtosis}
 \begin{flushleft}
-Skewedness of Dow Jones Index : -1.6916 \linebreak
+Skewness of Dow Jones Index : -1.6916 \linebreak
 Kurtosis of Dow Jones Index : 45.3947 \linebreak
-Skewedness of S\&P 500 : -1.2832 \linebreak
+Skewness of S\&P 500 : -1.2832 \linebreak
 Kurtosis of S\&P 500 : 31.4436 \linebreak
 \end{flushleft}
-\vspace{-5mm}
-The Dow and S\&P indices both have negative skewedness, which means that the distribution of log returns is asymmetric and is left-skewed. There are several conclusions we can draw from this finding. Firstly, we know that a left-skewed distribution has a “drawn out” left tail – meaning, it has a longer and fatter left-tail. Also, we know that the mean of the distribution is smaller than the median, which itself is smaller than the mode. And, Finally, we know that the median is closer to the third quartile that to the first quartile. 
 
-Intuitively, we do not find that it is unusual to expect negative skewedness in index returns because we observe more extreme downward movement (i.e. larger negative returns) during periods of recession.
+The Dow and S\&P indices both have negative skewness, which means that the distribution of log returns is asymmetric and is left-skewed. There are several conclusions we can draw from this finding. Firstly, we know that a left-skewed distribution has a “drawn out” left tail – meaning, it has a longer and fatter left-tail. Also, we know that the mean of the distribution is smaller than the median, which itself is smaller than the mode. And, Finally, we know that the median is closer to the third quartile that to the first quartile. 
 
-The Dow and S\&P have kurtosis values of 45.3947 and 31.4436 respectively. This is very high, considering that the kurtosis of the standard normal distribution is 3.0. Kurtosis is a measure of the sharpness of the peak of a frequency-distribution curve. The high kurtosis means that the Dow and S\&P index (and by extension from the S\&P 500, the US stock market) is generally \textit{leptokurtic}. This means that the tails of the log return frequency-distribution approaches 0 more slowly than a normal distribution, and therefore produces more outliers than the normal distribution. 
+Intuitively, we do not find that it is unusual to expect negative skewness in index returns because we observe more extreme downward movement (i.e. larger negative returns) during periods of recession.
+
+The Dow and S\&P have kurtosis values of 45.3947 and 31.4436 respectively. This is very high, considering that the kurtosis of a normal distribution is 3.0. Kurtosis is a measure of the sharpness of the peak of a frequency-distribution curve, and distributions with kurtosis greater than 3 are said to be leptokurtic. The high kurtosis of the Dow and S\&P indices' log return distributions, and by extension the US stock market return histogram, imply that the tails of the distributions approaches 0 more slowly than a normal distribution, and therefore produces more outliers than the normal distribution. 
 
 The implication of this finding is that extreme “events” like stock price crash or booms, which produce abnormally large returns (both positive and negative), are happening more often than what is predicted by the normal distribution.
 
@@ -102,32 +107,50 @@ Jarque-Beta Statistic of Dow Jones Ind Avg's Returns: 633852.49\linebreak
 Jarque-Beta Statistic of S\&P's Returns: 285696.06\linebreak
 Critical Chi-Square Value with 2 Degrees of Freedom: 5.991465\linebreak
 \end{flushleft}
-\vspace{-5mm}
+
 The JB test’s null hypothesis is JB = 0. If the null hypothesis is not rejected, it indicates that the distribution that we are testing is normal distribution (under a certain level of significance).  
 
 The critical Chi-Square Value with 2 Degrees of Freedom and at 5\% significance level is 5.9915. The JB test statistic for both the Dow and S\&P are above that critical value. We therefore reject the null hypothesis for both the S\&P as well as the Dow. And, we conclude that based on the JB test at the 5\% significance level, the log return of these two indices are not normally distributed.
 
-\newpage
+We plotted the frequency-distribution histogram, overlaid with a normal distribution curve with the same mean and variance to the underlying data. From the image, we noted the histogram for both the S\&P and DJI has a sharper peak and fatter tail. This indicates that the distribution of log returns for both indices are not normally distributed as they have a much higher kurtosis.
+
+Furthermore, as seen from the range of the histogram plot (x-axis), there are a number of extreme "high sigma" events. The normal distribution predicts that these events will occur with close to zero probability, therefore, the very existence of such events indicate the underlying data is not normally distributed. 
+
 \begin{figure}[h!]
-	\includegraphics[width=\linewidth]{DJInorm.png}
+	\centering
+	\includegraphics[width=0.8\linewidth]{DJInorm.png}
 	\caption{Distribution of Dow Jones Index log returns}
 \end{figure}
 \begin{figure}[h!]
-	\includegraphics[width=\linewidth]{GSPCnorm.png}
+	\centering
+	\includegraphics[width=0.8\linewidth]{GSPCnorm.png}
 	\caption{Distribution of S\&P 500 log returns}
 \end{figure}
-
 
 \newpage
 \section{Task2}
 \label{sec:introduction}
 
-\subsection{Correlation bewteen log returns of Dow Jones Index and S\&P 500}
-The correlation of the daily log returns from 30th January 1985 to 17th October 2018 is 0.9651. As the correlation is very close to 1, we say that the daily log returns of the S\&P and Dow are highly correlated. We believe that the high correlation can be explained by the fact that Dow’s 30 component stocks are also included in the S\&P index. 
+\subsection{Correlation between log returns of the Dow Jones Index and S\&P 500}
+The correlation of the daily log returns from 30th January 1985 to 17th October 2018 is 0.9651. As the correlation is very close to 1, we say that the daily log returns of the S\&P and Dow are highly correlated. We believe that the high correlation can be explained by the fact that the Dow’s 30 component stocks are also included in the S\&P index. 
 
-When we analyse the correlation on a 252-day rolling basis, we noted that there are periods where the correlation drops sharply to approximately 0.8. This finding is logical because the Dow, unlike the S\&P, is sometimes affected by large price swings in one of its component stocks. The same price swing would not affect the S\&P as much because of the S\&P’s larger coverage.  
+When we analyse the correlation on a 252-day rolling basis, we noted that there are periods where the correlation drops sharply to approximately 0.8. This finding is logical because the Dow, unlike the S\&P, is sometimes affected by large price swings in one of its component stocks. The same price swing would not affect the S\&P as much because of the S\&P’s larger coverage. 
 
+JOEL ADD YOUR WRIT UP HERE\\
+lalalalalalalalala\\
+lololololololololo\\
+lelelelelelellelele\\
+lalalalalalalalala\\
+lololololololololo\\
+lelelelelelellelele\\
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{correlation.png}
+	\caption{Distribution of S\&P 500 log returns}
+\end{figure}
+
+\newpage
 \subsection{Two-sample t-test of the two indexes}
 \begin{flushleft}
 t Statistic: 0.164005
