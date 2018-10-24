@@ -36,16 +36,15 @@ for i in list(DJI['Date']):
 fig, ax1 = plt.subplots(figsize=(8,6))
 ax2 = ax1.twinx()
 
-ax1.plot(Dates, DJI_close, color='b', label='Dow Jones Industrial Average',linewidth=0.5)
+ax1.plot(Dates, DJI_close, color='b', label='Dow Jones Industrial Average')
 ax1.set_xlabel('Year')
 ax1.set_ylabel('Dow Jones Ind Avg Price')
 
-ax2.plot(Dates, GSPC_close, color='r', label='S&P 500',linewidth=0.5)
+ax2.plot(Dates, GSPC_close, color='r', label='S&P 500')
 ax2.set_ylabel('S&P 500 Price')
 
 fig.tight_layout()
 fig.legend(loc=(0.16, 0.82))
-plt.grid()
 plt.savefig('time_series.png', dpi=900)
 plt.show()
 
@@ -147,7 +146,7 @@ print('Kurtosis of S&P 500\'s Returns: ' + str(round(GSPC_Kurt,8)))
 # Additional chart
 # frequency distribution histogram overlay with normal with same mean and variance
 plt.figure(figsize=(8,6))
-plt.hist([i*100 for i in DJIlogret],bins=1000,density=True,label='Dist. of Dow Jones Ind Avg Log Returns',color='b')
+plt.hist([i*100 for i in DJIlogret],bins=50,density=True,label='Dist. of Dow Jones Ind Avg Log Returns',color='b')
 
 DJI_NormMean = np.mean([i*100 for i in DJIlogret])
 DJI_NormSigma = np.std([i*100 for i in DJIlogret],ddof=1)
@@ -163,7 +162,7 @@ plt.savefig('DJInorm.png', dpi=900)
 plt.show()
 
 plt.figure(figsize=(8,6))
-plt.hist([i*100 for i in GSPClogret],bins=1000,density=True,label='Dist. of S&P 500 Log Returns',color='r')
+plt.hist([i*100 for i in GSPClogret],bins=50,density=True,label='Dist. of S&P 500 Log Returns',color='r')
 
 GSPC_NormMean = np.mean([i*100 for i in GSPClogret])
 GSPC_NormSigma = np.std([i*100 for i in GSPClogret],ddof=1)
@@ -174,7 +173,7 @@ plt.xlabel('Log Returns (%)')
 plt.ylabel('Probability')
 plt.legend(loc='upper left')
 plt.grid(True)
-plt.axis([-25,15,0,0.9])
+plt.axis([-25,15,0,0.8])
 plt.savefig('GSPCnorm.png', dpi=900)
 plt.show()
 

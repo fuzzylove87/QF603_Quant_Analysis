@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  24 OCT 2018 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  24 OCT 2018 19:11
 entering extended mode
 **./Report_v.3.tex
 (Report_v.3.tex
 LaTeX2e <2018-04-01> patch level 5
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -19,61 +19,67 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-)
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
+y"
 Package: babel 2018/06/05 3.22 The Babel package
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
+"
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engli
-sh.ldf"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engl
+ish.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2018/06/05 3.22 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.de
-f")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.d
+ef")
 \bbl@dirlevel=\count89
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-) ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.s
-ty"
+)
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.st
+y"
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
-"
+
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.st
+y"
 Package: amstext 2000/06/29 v2.01 AMS text
- ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
 "
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen104
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty
+"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen105
-) ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.st
-y"
+)
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty
+"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count90
@@ -114,30 +120,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.
+sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
-"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.
+sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphi
-cs.cfg"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graph
+ics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex
-.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdfte
+x.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen113
@@ -146,28 +152,28 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
 Package: todonotes 2012/07/25
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
-"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.st
+y"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.t
-ex"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.
 tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils
+.tex"
 \XKV@toks=\toks22
 \XKV@tempa@toks=\toks23
 )
 \XKV@depth=\count102
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.
-cfg"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color
+.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -181,48 +187,48 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\t
-ikz.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.
-sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrc
-s.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-util-common.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\
+tikz.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfr
+cs.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common.tex"
 \pgfutil@everybye=\toks24
 \pgfutil@tempdima=\dimen115
 \pgfutil@tempdimb=\dimen116
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-util-common-lists.tex"))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-util-latex.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-common-lists.tex"))
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+futil-latex.def"
 \pgfutil@abb=\box28
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-rcs.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+frcs.code.tex"
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfc
-ore.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgf
-sys.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsys.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf
+core.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pg
+fsys.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys.code.tex"
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-keys.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"
 \pgfkeys@pathtoks=\toks25
 \pgfkeys@temptoks=\toks26
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-keysfiltered.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks27
 ))
 \pgf@x=\dimen117
@@ -243,42 +249,42 @@ keysfiltered.code.tex"
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gf.cfg"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsys-pdftex.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsys-common-pdf.def"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsyssoftpath.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count107
 \pgfsyssoftpath@bigbuffer@items=\count108
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
-gfsysprotocol.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\
+pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcore.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
-code.tex"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathc
-alc.code.tex"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathu
-til.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathp
-arser.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+calc.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+util.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+parser.code.tex"
 \pgfmath@dimen=\dimen125
 \pgfmath@count=\count109
 \pgfmath@box=\box29
@@ -286,30 +292,30 @@ arser.code.tex"
 \pgfmath@stack@operand=\toks32
 \pgfmath@stack@operation=\toks33
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.code.tex"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.basic.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.trigonometric.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.random.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.comparison.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.base.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.round.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.misc.code.tex")
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-unctions.integerarithmetics.code.tex")))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
-loat.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.basic.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.trigonometric.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.random.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.comparison.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.base.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.round.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.misc.code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+functions.integerarithmetics.code.tex")))
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+float.code.tex"
 \c@pgfmathroundto@lastzeros=\count110
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorepoints.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen126
 \pgf@picmaxx=\dimen127
@@ -326,128 +332,128 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen138
 \pgf@zy=\dimen139
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorepathconstruct.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen140
 \pgf@path@lasty=\dimen141
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorepathusage.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen142
 \pgf@shorten@start@additional=\dimen143
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorescopes.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
 \pgf@picture@serial@count=\count111
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoregraphicstate.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen144
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoretransformations.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen145
 \pgf@pt@y=\dimen146
 \pgf@pt@temp=\dimen147
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorequick.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoreobjects.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreobjects.code.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorepathprocessing.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepathprocessing.code.tex"
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorearrows.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen148
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoreshade.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen149
 \pgf@sys@shading@range@num=\count112
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoreimage.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoreexternal.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box33
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorelayers.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcoretransparency.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcoretransparency.code.tex"
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
-fcorepatterns.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\p
+gfcorepatterns.code.tex"
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
-duleshapes.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box34
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
-duleplot.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+oduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\p
-gfcomp-version-0-65.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen150
 \pgf@nodesepend=\dimen151
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\p
-gfcomp-version-1-18.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\
+pgfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgffo
-r.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfke
-ys.sty"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-keys.code.tex"))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.st
-y"
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
-code.tex"))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
-for.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgff
+or.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfk
+eys.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+fkeys.code.tex"))
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.s
+ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex"))
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pg
+ffor.code.tex"
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
-code.tex")
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath
+.code.tex")
 \pgffor@iter=\dimen152
 \pgffor@skip=\dimen153
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\tikz.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
-libraryplothandlers.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pg
+flibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count113
 \pgfplotmarksize=\dimen154
@@ -467,8 +473,8 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count116
 \tikz@fig@count=\count117
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
-dulematrix.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfm
+odulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count118
 \pgfmatrixcurrentcolumn=\count119
@@ -476,15 +482,15 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count121
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\libraries\tikzlibrarytopaths.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\libraries\tikzlibrarypositioning.code.tex"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlaye
+r\tikz\libraries\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count122
 \calc@Bcount=\count123
@@ -499,25 +505,25 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \c@@todonotes@numberoftodonotes=\count125
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspace.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspace.
+sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
+sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.st
-y"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.s
+ty"
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.
+sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.s
-ty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.
+sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count126
@@ -533,8 +539,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen170
 \Gm@dimlist=\toks36
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.c
-fg")) (Report_v.3.aux
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
+cfg")) (Report_v.3.aux
 
 LaTeX Warning: Label `sec:introduction' multiply defined.
 
@@ -554,8 +560,8 @@ LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
-i"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
+ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count129
 \scratchdimen=\dimen171
@@ -569,40 +575,40 @@ i"
 \makeMPintoPDFobject=\count134
 \everyMPtoPDFconversion=\toks38
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
-ase.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
+base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarer
-r.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infware
+rr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
-"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.st
+y"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefine
-keys.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefin
+ekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.
-sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds
+.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.
-sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions
+.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkey
-s.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetke
+ys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds
-.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmd
+s.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex
-.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluate
+x.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -611,8 +617,8 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcm
-ds.sty"
+("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexc
+mds.sty"
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -663,7 +669,7 @@ G,.JBIG2,.JB2,.eps]
 
 [1
 
-{C:/Users/Drow/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/ykfri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <time_series.png, id=17, 578.16pt x 433.62pt>
 File: time_series.png Graphic file (type png)
 <use time_series.png>
@@ -684,18 +690,18 @@ Package pdftex.def Info: SP_logret.png  used on input line 60.
 <DJInorm.png, id=36, 578.16pt x 433.62pt>
 File: DJInorm.png Graphic file (type png)
 <use DJInorm.png>
-Package pdftex.def Info: DJInorm.png  used on input line 123.
+Package pdftex.def Info: DJInorm.png  used on input line 124.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
 <GSPCnorm.png, id=37, 578.16pt x 433.62pt>
 File: GSPCnorm.png Graphic file (type png)
 <use GSPCnorm.png>
-Package pdftex.def Info: GSPCnorm.png  used on input line 128.
+Package pdftex.def Info: GSPCnorm.png  used on input line 129.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [6 <./DJInorm.png> <./GSPCnorm.png>]
 <correlation.png, id=43, 578.16pt x 433.62pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
-Package pdftex.def Info: correlation.png  used on input line 143.
+Package pdftex.def Info: correlation.png  used on input line 144.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [7 <./correlation.png>] [8] (Report_v.3.aux)
 
@@ -704,24 +710,24 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  13537 strings out of 492973
- 268573 string characters out of 3127136
+ 268837 string characters out of 3126692
  322108 words of memory out of 3000000
  17123 multiletter control sequences out of 15000+200000
  9322 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,68p,826b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Drow/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Drow/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Drow/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
-/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb>
-Output written on Report_v.3.pdf (8 pages, 3804973 bytes).
+ 62i,6n,68p,827b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx9.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ykfri/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ykfri/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ykfri
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr9.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report_v.3.pdf (8 pages, 3629323 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
