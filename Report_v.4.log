@@ -1,31 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  24 OCT 2018 19:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  24 OCT 2018 19:23
 entering extended mode
-**./Report_v.3.tex
-(Report_v.3.tex
+**./Report_v.4.tex
+(Report_v.4.tex
 LaTeX2e <2018-04-01> patch level 5
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 <
-     <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no < in font nullfont!
-Missing character: There is no H in font nullfont!
-Missing character: There is no E in font nullfont!
-Missing character: There is no A in font nullfont!
-Missing character: There is no D in font nullfont!
 ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -37,19 +14,15 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@subsubsection=\count83
 \c@paragraph=\count84
 \c@subparagraph=\count85
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 1--274
-[]
- []
-
 \c@figure=\count86
 \c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-[1{C:/Users/ykfri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
-("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
+y"
 Package: babel 2018/06/05 3.22 The Babel package
+
 ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
 "
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
@@ -567,25 +540,25 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks36
 
 ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
-cfg")) (Report_v.3.aux
+cfg")) (Report_v.4.aux
 
 LaTeX Warning: Label `sec:introduction' multiply defined.
 
 )
-\openout1 = `Report_v.3.aux'.
+\openout1 = `Report_v.4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 ("C:\Users\ykfri\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
@@ -694,45 +667,43 @@ G,.JBIG2,.JB2,.eps]
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[2
+[1
 
-]
-<time_series.png, id=20, 578.16pt x 433.62pt>
+{C:/Users/ykfri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<time_series.png, id=17, 578.16pt x 433.62pt>
 File: time_series.png Graphic file (type png)
 <use time_series.png>
-Package pdftex.def Info: time_series.png  used on input line 46.
+Package pdftex.def Info: time_series.png  used on input line 44.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
- [3 <./time_series.png>]
-<DJI_logret.png, id=26, 578.16pt x 433.62pt>
+ [2 <./time_series.png>]
+<DJI_logret.png, id=23, 578.16pt x 433.62pt>
 File: DJI_logret.png Graphic file (type png)
 <use DJI_logret.png>
-Package pdftex.def Info: DJI_logret.png  used on input line 56.
+Package pdftex.def Info: DJI_logret.png  used on input line 54.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
-<SP_logret.png, id=27, 578.16pt x 433.62pt>
+<SP_logret.png, id=24, 578.16pt x 433.62pt>
 File: SP_logret.png Graphic file (type png)
 <use SP_logret.png>
-Package pdftex.def Info: SP_logret.png  used on input line 61.
+Package pdftex.def Info: SP_logret.png  used on input line 59.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
- [4 <./DJI_logret.png> <./SP_logret.png>] [5]
-[6]
-<DJInorm.png, id=39, 578.16pt x 433.62pt>
+ [3 <./DJI_logret.png> <./SP_logret.png>] [4] [5]
+<DJInorm.png, id=36, 578.16pt x 433.62pt>
 File: DJInorm.png Graphic file (type png)
 <use DJInorm.png>
-Package pdftex.def Info: DJInorm.png  used on input line 125.
+Package pdftex.def Info: DJInorm.png  used on input line 123.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
-<GSPCnorm.png, id=40, 578.16pt x 433.62pt>
+<GSPCnorm.png, id=37, 578.16pt x 433.62pt>
 File: GSPCnorm.png Graphic file (type png)
 <use GSPCnorm.png>
-Package pdftex.def Info: GSPCnorm.png  used on input line 130.
+Package pdftex.def Info: GSPCnorm.png  used on input line 128.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
- [7 <./DJInorm.png> <./GSPCnorm.png>]
-<correlation.png, id=47, 578.16pt x 433.62pt>
+ [6 <./DJInorm.png> <./GSPCnorm.png>]
+<correlation.png, id=43, 578.16pt x 433.62pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
-Package pdftex.def Info: correlation.png  used on input line 145.
+Package pdftex.def Info: correlation.png  used on input line 143.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
- [8 <./correlation.png>] [9]
-(Report_v.3.aux)
+ [7 <./correlation.png>] [8] (Report_v.4.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -740,7 +711,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  13537 strings out of 492973
  268837 string characters out of 3126692
- 322098 words of memory out of 3000000
+ 322108 words of memory out of 3000000
  17123 multiletter control sequences out of 15000+200000
  9322 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -756,9 +727,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ykfri
 mr7.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr9.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report_v.3.pdf (9 pages, 3629695 bytes).
+Output written on Report_v.4.pdf (8 pages, 3629323 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
