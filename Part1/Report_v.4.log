@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  24 OCT 2018 19:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  24 OCT 2018 21:06
 entering extended mode
 **./Report_v.4.tex
 (Report_v.4.tex
@@ -670,35 +670,35 @@ G,.JBIG2,.JB2,.eps]
 [1
 
 {C:/Users/ykfri/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<time_series.png, id=17, 578.16pt x 433.62pt>
+<time_series.png, id=18, 578.16pt x 433.62pt>
 File: time_series.png Graphic file (type png)
 <use time_series.png>
 Package pdftex.def Info: time_series.png  used on input line 44.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [2 <./time_series.png>]
-<DJI_logret.png, id=23, 578.16pt x 433.62pt>
+<DJI_logret.png, id=24, 578.16pt x 433.62pt>
 File: DJI_logret.png Graphic file (type png)
 <use DJI_logret.png>
 Package pdftex.def Info: DJI_logret.png  used on input line 54.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
-<SP_logret.png, id=24, 578.16pt x 433.62pt>
+<SP_logret.png, id=25, 578.16pt x 433.62pt>
 File: SP_logret.png Graphic file (type png)
 <use SP_logret.png>
 Package pdftex.def Info: SP_logret.png  used on input line 59.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [3 <./DJI_logret.png> <./SP_logret.png>] [4] [5]
-<DJInorm.png, id=36, 578.16pt x 433.62pt>
+<DJInorm.png, id=37, 578.16pt x 433.62pt>
 File: DJInorm.png Graphic file (type png)
 <use DJInorm.png>
 Package pdftex.def Info: DJInorm.png  used on input line 123.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
-<GSPCnorm.png, id=37, 578.16pt x 433.62pt>
+<GSPCnorm.png, id=38, 578.16pt x 433.62pt>
 File: GSPCnorm.png Graphic file (type png)
 <use GSPCnorm.png>
 Package pdftex.def Info: GSPCnorm.png  used on input line 128.
 (pdftex.def)             Requested size: 345.03154pt x 258.7713pt.
  [6 <./DJInorm.png> <./GSPCnorm.png>]
-<correlation.png, id=43, 578.16pt x 433.62pt>
+<correlation.png, id=44, 578.16pt x 433.62pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
 Package pdftex.def Info: correlation.png  used on input line 143.
@@ -726,10 +726,11 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ykfri
 /Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr7.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmr9.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report_v.4.pdf (8 pages, 3629323 bytes).
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ykfri/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Report_v.4.pdf (8 pages, 3636790 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
