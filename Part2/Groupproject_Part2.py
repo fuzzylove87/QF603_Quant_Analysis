@@ -31,8 +31,8 @@ DJI_Logreturn = np.log(DJI_Nominator/DJI_Denominator)
 GSPC_Logreturn = np.log(GSPC_Nominator/GSPC_Denominator)
 
 # Linear Regression
-DJI_Logreturn = sm.add_constant(DJI_Logreturn)
-Regression = sm.OLS(GSPC_Logreturn,DJI_Logreturn)
+GSPC_Logreturn = sm.add_constant(GSPC_Logreturn)
+Regression = sm.OLS(DJI_Logreturn, GSPC_Logreturn)
 Result = Regression.fit()
 
 # Critical t-value
@@ -77,8 +77,8 @@ DJI_Annual_Logreturn = np.log(DJI_Annual_Nominator/DJI_Annual_Denominator)
 GSPC_Annual_Logreturn = np.log(GSPC_Annual_Nominator/GSPC_Annual_Denominator)
 
 # Linear Regression for Annual Return
-DJI_Annual_Logreturn = sm.add_constant(DJI_Annual_Logreturn)
-Annual_Regression = sm.OLS(GSPC_Annual_Logreturn,DJI_Annual_Logreturn)
+GSPC_Annual_Logreturn = sm.add_constant(GSPC_Annual_Logreturn)
+Annual_Regression = sm.OLS(DJI_Annual_Logreturn, GSPC_Annual_Logreturn)
 Annual_Result = Regression.fit()
 
 # Critical t-value
@@ -103,6 +103,6 @@ print("Task4--------------------------------------------------------------------
 print("1. Alpha = %0.6f, Beta = %0.6f" %(Annual_Result.params[0], Annual_Result.params[1]))
 print("2. STD of Residual = %0.6f" %(Annual_Result.resid.std()))
 print("3. T-stats for a hat = %0.6f, T-stats for b hat = %0.6f" %(Annual_Result.tvalues[0], Annual_Result.tvalues[1]))
-print("4. Critical value for 5%% significance level = %0.4f, %0.4f" %(float(-Critical_Value), float(Critical_Value)))
+print("4. Critical value for 5%% significance level = %0.4f, %0.4f" %(float(-Annual_Critical_Value), float(Annual_Critical_Value)))
 print("5. R-Squared = %0.6f, adjusted R-Squared = %0.6f" %(Annual_Result.rsquared, Annual_Result.rsquared_adj))
 print("6. Jarque-Bera test stats = %0.6f" %(float(Annual_JB)))
