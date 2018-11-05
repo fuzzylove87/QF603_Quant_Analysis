@@ -2,7 +2,7 @@
 """
 Created on Sun Nov  4 14:12:02 2018
 
-@author: ykfri
+@author: ChanJung Kim
 """
 
 import pandas as pd
@@ -10,7 +10,6 @@ import numpy as np
 import statsmodels.api as sm
 from datetime import date
 from scipy import stats
-from math import log
 
 # Task 3
 DJI = pd.read_csv('^DJI.csv')
@@ -69,8 +68,8 @@ GSPC_Annual_Price = np.array(GSPC['Close'].loc[Last_Annual_BD])
 # Denominator = previous year's return, Nominator = this year's return
 DJI_Annual_Denominator = DJI_Annual_Price[:-1]
 DJI_Annual_Nominator = DJI_Annual_Price[1:]
-GSPC_Annual_Denominator = DJI_Annual_Price[:-1]
-GSPC_Annual_Nominator = DJI_Annual_Price[1:]
+GSPC_Annual_Denominator = GSPC_Annual_Price[:-1]
+GSPC_Annual_Nominator = GSPC_Annual_Price[1:]
 
 # Log returns
 DJI_Annual_Logreturn = np.log(DJI_Annual_Nominator/DJI_Annual_Denominator)
@@ -79,7 +78,7 @@ GSPC_Annual_Logreturn = np.log(GSPC_Annual_Nominator/GSPC_Annual_Denominator)
 # Linear Regression for Annual Return
 GSPC_Annual_Logreturn = sm.add_constant(GSPC_Annual_Logreturn)
 Annual_Regression = sm.OLS(DJI_Annual_Logreturn, GSPC_Annual_Logreturn)
-Annual_Result = Regression.fit()
+Annual_Result = Annual_Regression.fit()
 
 # Critical t-value
 Annual_Critical_Value = stats.t.ppf(0.975, len(DJI_Annual_Logreturn)-2)
@@ -88,7 +87,6 @@ Annual_Critical_Value = stats.t.ppf(0.975, len(DJI_Annual_Logreturn)-2)
 Annual_Gamma = np.sum((Annual_Result.resid - Annual_Result.resid.mean())**3/len(Annual_Result.resid)*Annual_Result.resid.std()**3)
 Annual_Kappa = np.sum((Annual_Result.resid - Annual_Result.resid.mean())**4/len(Annual_Result.resid)*Annual_Result.resid.std()**4)
 Annual_JB = len(Annual_Result.resid)*((Annual_Gamma**2)/6 + ((Annual_Kappa-3)**2)/24)
-
 
 print("Task3-------------------------------------------------------------------------")
 print("1. Alpha = %0.6f, Beta = %0.6f" %(Result.params[0], Result.params[1]))
