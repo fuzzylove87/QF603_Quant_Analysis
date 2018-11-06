@@ -7,6 +7,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{verbatim}
 \usepackage{graphicx}
+\usepackage[export]{adjustbox}
 \setlength{\parskip}{\baselineskip}
 \setlength{\parindent}{0pt}
 
@@ -46,7 +47,7 @@
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Daily_Hist.png}
-			\caption{Desity Histogram of Residual of Daily Log Return}
+			\caption{Density Histogram of Residuals from the Daily Log Return regression}
 		\end{minipage}
 	\end{figure}
 	
@@ -147,7 +148,7 @@
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Ann_Hist.png}
-			\caption{Density Histogram of Residual of Annual Log Return}
+			\caption{Density Histogram of Residuals from the Annual Log Return regression}
 		\end{minipage}
 	\end{figure}
 	
@@ -200,7 +201,19 @@
 		\item Critical Chi-Square Value at 5\% significance level = 5.99146
 	\end{itemize}
 	
-	The JB test statistic falls within the critical value, indicating that the regression residuals are normally distributed. 
+	The JB test statistic falls within the critical value, indicating that the regression residuals are normally distributed. We note that this finding is in contrast to the JB test performed for the daily log returns, and would like to investigate further as to the possible reason why this may be so.
+	
+	When we observe the density histograms (at the top of each section) we can see the stark difference in the distribution of the residuals. Although the histogram of residuals from the daily log returns regression has a more bell-like shape, that distribution fails the JB test. On closer inspection, we note that there are large negative outliers in the the histogram of residuals from the regression of the daily log returns (as can be seen from the range of the x-axis). We, therefore, suspect that it is these large outliers that caused the distribution to fail the JB test; by increasing the kurtosis of the distribution beyond what is tolerable under a normal distribution.
+	
+	When we plot the top 100 "worst days" (i.e. largest loss) log returns by month, we can see that most of the worse days do not even fall in December, let alone the 31st. Clearly, there is a greater number of outliers "included" in the daily return residuals. 
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.6\linewidth, frame]{worstdays.png}
+		\caption{Chart of Top 100 Largest Negative Log Returns}
+	\end{figure}
+	
+	The exclusion of these outliers in the annual log return regression probably "saved" it from failing the JB test. 
 	
 	\subsection{Additional test-$H_0$: $\hat{b}=1$}
 	\underline{Results}
