@@ -48,7 +48,8 @@ n = len(xd)
 
 # 1. ahat and bhat
 bhat = sum(xd*yd)/sum(xd*xd)
-ahat = lreturns_DJI_y_mean - bhat * lreturns_GSPC_x_mean
+ahat = lreturns_DJI_y_mean - bhat * lreturns_GSPC_x_
+mean
 print("1. ahat = %0.5f bhat = %0.5f" % (ahat, bhat))
 
 # fitted value yf and residual e
@@ -105,6 +106,7 @@ plt.xlabel('S&P 500 Daily Log Returns')
 plt.ylabel('DJIA Daily Log Returns')
 plt.grid(True)
 plt.legend(loc='lower right')
+plt.savefig('Regression.png', dpi=800)
 plt.show()
 
 plt.hist([i*100 for i in e],bins=50,density=True,label='Density Histogram of Residual of Daily Log Returns',color='r')
@@ -113,6 +115,7 @@ plt.ylabel('Density')
 plt.legend(loc='upper left')    
 plt.grid(True)
 plt.axis([np.min(e_annual*100)*1.2,np.max(e_annual*100)*1.2,0,2.2])
+plt.savefig('Normaldist.png', dpi=800)
 plt.show()
 
 print("---------------------------- Task 4 ----------------------------")
@@ -190,6 +193,7 @@ plt.xlabel('S&P 500 Annual Log Returns')
 plt.ylabel('DJIA Annual Log Returns')
 plt.grid(True)
 plt.legend(loc='lower right')
+plt.savefig('Annual_Regression.png', dpi=800)
 plt.show()
 
 
@@ -199,4 +203,5 @@ plt.ylabel('Density')
 plt.legend(loc='upper left')    
 plt.grid(True)
 plt.axis([np.min(e_annual*100)*1.2,np.max(e_annual*100)*1.2,0,2.2])
+plt.savefig('Annual_Normaldist.png', dpi=800)
 plt.show()
