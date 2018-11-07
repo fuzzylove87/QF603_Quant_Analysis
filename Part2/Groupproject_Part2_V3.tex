@@ -8,6 +8,7 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
+\usepackage{caption}
 \setlength{\parskip}{\baselineskip}
 \setlength{\parindent}{0pt}
 
@@ -25,10 +26,15 @@
 	
 	\begin{abstract}
 		In this report, we implemented a simple linear regression of the Dow Jones Industrial Average (“DJIA”) index over the S\&P500 (“S\&P”) using daily and annual log returns.
-		 
+		
+	\vspace{6pt}
+	
 		Our key finding is that the return characteristics of the DJIA does not exhibit statistically significant average excess returns as compared to the S\&P.
-		 
-		Another finding is that using different time intervals (daily vs annual log returns) to preform the regression leads to significant differences in the kurtosis measure of the distribution of the error terms in the regression. Investigating further, the reason for this difference is found to be due to the bias introduced into the annual data series when the last day of the year is used as a benchmark. We present further comparative illustrations to show this. 
+		
+	\vspace{6pt} 
+	
+		Another finding is that using different time intervals (daily vs annual log returns) to perform the regression leads to significant differences in the kurtosis measure of the distribution of the error terms in the regression. Investigating further, the reason for this difference is found to be due to the bias introduced into the annual data series when the last day of the year is used as a benchmark. We present further comparative illustrations to show this. 
+		
 		 	
 	\end{abstract} 
 	
@@ -42,27 +48,26 @@
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Daily_Scatter.png}
-			\caption{Regression Line of Daily Log Return}
+			\captionsetup{font=small}
+			\caption{Scatter Plot and Regression Line of Daily Log Returns}
 		\end{minipage}
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Daily_Hist.png}
-<<<<<<< HEAD
-			\caption{Density Histogram of Residuals from the Daily Log Return regression}
-=======
+			\captionsetup{font=small}
 			\caption{Desity Histogram of Residual}
->>>>>>> 4b5a1a4fded33820a1483528b97ebf7524a770f1
 		\end{minipage}
 	\end{figure}
 	
-	\subsection{Estimate of key statistics $\hat{a},\hat{b}$ and $\hat{\sigma}_{u_t}$}
+	\subsection{Estimate of key statistics $\hat{a},\hat{b}$ and $\hat{\sigma_{u}}$}
+	\setstretch{1.4}
 	\underline{Results}
 	\begin{itemize}[nosep]
-		\item Alpha = $\hat{a} = -0.00005$, Beta = $\hat{b} = 0.94311$
-		\item Standard Distribution of Residual = $\sigma_{u_t} = 0.00288$
+		\item Alpha = $\hat{a} = 0.00005$, Beta = $\hat{b} = 0.94311$
+		\item Standard Distribution of Residual = $\hat{\sigma_{u}} = 0.00288$
 	\end{itemize}
 
-	The regression can be expressed as $r_{(DJIA, t)} = -0.00005 +  0.94311 r_{(S\&P500, t)}$.
+	The regression can be expressed as $r_{(\textnormal{DJIA}, t)} = 0.00005 +  0.94311 r_{(\textnormal{S\&P500}, t)}$.
 	
 	The positive intercept indicates that the DJIA has a small positive daily excess returns on average as compared to the S\&P. 
 	
@@ -95,7 +100,7 @@
 	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ values}
 	\underline{Results}
 	\begin{itemize}[nosep]
-		\item R-Squared $(R^2) = 93.15120\%$
+		\item R-Squared $(R^2) = 93.1512\%$
 		\item Adjusted R-Squared $(\textnormal{adj-}R^2) = 93.1539\%$
 	\end{itemize}
 	\begin{comment}
@@ -147,16 +152,14 @@
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Ann_Scatter.png}
+			\captionsetup{font=small}
 			\caption{Regression Line of Annual Log Return}
 		\end{minipage}
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Ann_Hist.png}
-<<<<<<< HEAD
-			\caption{Density Histogram of Residuals from the Annual Log Return regression}
-=======
+			\captionsetup{font=small}
 			\caption{Density Histogram of Residual}
->>>>>>> 4b5a1a4fded33820a1483528b97ebf7524a770f1
 		\end{minipage}
 	\end{figure}
 	
@@ -164,10 +167,10 @@
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item Alpha = $\hat{a} = 0.01978$, Beta = $\hat{b} = 0.84254$
-		\item Standard Distribution of Residual = $\sigma_{u_t} = 0.03797$
+		\item Standard Distribution of Residual = $\hat{\sigma_{u}} = 0.03797$
 	\end{itemize}
 
-    The regression can be expressed as $r_{(DJIA, t)} = 0.01978 +  0.84254 r_{(S\&P500, t)}$.
+    The regression can be expressed as $r_{(\textnormal{DJIA}, t)} = 0.01978 +  0.84254 r_{(\textnormal{S\&P500}, t)}$.
 	
 	The positive intercept indicates that the DJIA has a small positive daily excess returns on average as compared to the S\&P. 
 	
@@ -193,8 +196,8 @@
 	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ values}
 	\underline{Results}
 	\begin{itemize}[nosep]
-		\item R-Squared $(R^2) = 0.932983$
-		\item Adjusted R-Squared $(\textnormal{adj-}R^2) = 0.930749$
+		\item R-Squared $(R^2) = 93.2983\%$
+		\item Adjusted R-Squared $(\textnormal{adj-}R^2) = 93.0749\%$
 	\end{itemize}
 
      The $R^2$ value is very high, further supporting our previous point that there exists a linear relationship between the annual returns of the DJIA and the S\&P.
@@ -213,11 +216,12 @@
 	
 	When we observe the density histograms (at the top of each section) we can see the stark difference in the distribution of the residuals. Although the histogram of residuals from the daily log returns regression has a more bell-like shape, that distribution fails the JB test. On closer inspection, we note that there are large negative outliers in the the histogram of residuals from the regression of the daily log returns (as can be seen from the range of the x-axis). We, therefore, suspect that it is these large outliers that caused the distribution to fail the JB test; by increasing the kurtosis of the distribution beyond what is tolerable under a normal distribution.
 	
-	When we plot the top 100 "worst days" (i.e. largest loss) log returns by month, we can see that most of the worse days do not even fall in December, let alone the 31st. Clearly, there is a greater number of outliers "included" in the daily return residuals. 
+	When we plot the top 100 ``worst day" (i.e. largest loss) log returns by month, we can see that most of the worst days do not even fall in December, let alone the 31st. Clearly, there is a greater number of outliers ``included" in the daily return residuals. 
 	
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.6\linewidth, frame]{worstdays.png}
+		\captionsetup{font=small}
 		\caption{Chart of Top 100 Largest Negative Log Returns}
 	\end{figure}
 	
