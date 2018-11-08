@@ -9,6 +9,10 @@ import numpy as np
 from scipy import stats
 from datetime import datetime
 
+import matplotlib.pyplot as plt
+import matplotlib.mlab as mlab
+import statistics
+
 #Plugging in previous definitions created in Assignment 1
 def Skewness(ret_list):
     mean_ret=np.mean(ret_list)
@@ -88,6 +92,33 @@ Chisquare_value = stats.chi2.ppf(1-0.05,2)
 print("6. Jarque-Bera test stats = %0.5f" % (JB_residual))
 print("7. Chi-square critical value forJarque-Bera test = %0.5f" % (Chisquare_value))
 
+#8 Additional findings
+tstat2 = (bhat-1)/SE_bhat
+print("8. tstat of bhat (when H0: b=1) = %0.5f" % (tstat2))
+
+x_plots=[np.min(lreturns_GSPC_x),np.max(lreturns_GSPC_x)]
+y_plots=[(ahat + bhat*i) for i in x_plots]
+
+plt.plot(x_plots,y_plots,label='Regression Line',color='k')
+plt.scatter(lreturns_GSPC_x,lreturns_DJI_y,label='Scatter Plot of S&P 500 vs DJIA Daily Log Returns',color='r')
+plt.xlabel('S&P 500 Daily Log Returns')
+plt.ylabel('DJIA Daily Log Returns')
+plt.grid(True)
+plt.legend(loc='lower right')
+plt.savefig('Regression.png', dpi=800)
+plt.savefig('Daily_Scatter.jpeg', dpi=800,quality=100)
+plt.show()
+
+plt.hist([i*100 for i in e],bins=50,density=True,label='Density Histogram of Residual of Daily Log Returns',color='r')
+plt.xlabel('Residuals (%)')
+plt.ylabel('Density')
+plt.legend(loc='upper left')    
+plt.grid(True)
+plt.axis([np.min(e*100)*1.2,np.max(e*100)*1.2,0,2.2])
+plt.savefig('Normaldist.png', dpi=800)
+plt.axis([np.min(e*100)*1.2,np.max(e*100)*1.2,0,2.2])
+plt.savefig('Daily_Hist.jpeg', dpi=800,quality=100)
+plt.show()
 
 print("---------------------------- Task 4 ----------------------------")
 
@@ -149,3 +180,30 @@ print("5. Adjusted R^2 = %0.5f percent" % (R2bar_annual*100))
 JB_residual_annual = Jarque_Beta(e_annual)
 print("6. Jarque-Bera test stats = %0.5f" % (JB_residual_annual))
 print("7. Chi-square critical value for Jarque-Bera test = %0.5f" % (Chisquare_value))
+
+#8 Additional findings
+tstat2_annual = (bhat_annual-1)/SE_bhat_annual
+print("8. tstat of bhat (when H0: b=1) = %0.5f" % (tstat2_annual))
+
+x_plots_annual=[np.min(lreturns_GSPC_x_annual),np.max(lreturns_GSPC_x_annual)]
+y_plots_annual=[(ahat_annual + bhat_annual*i) for i in x_plots_annual]
+
+plt.plot(x_plots_annual,y_plots_annual,label='Regression Line',color='k')
+plt.scatter(lreturns_GSPC_x_annual,lreturns_DJI_y_annual,label='Scatter Plot of S&P 500 vs DJIA Annual Log Returns',color='b')
+plt.xlabel('S&P 500 Annual Log Returns')
+plt.ylabel('DJIA Annual Log Returns')
+plt.grid(True)
+plt.legend(loc='lower right')
+plt.savefig('Annual_Regression.png', dpi=800)
+plt.savefig('Ann_Scatter.jpeg', dpi=800,quality=100)
+plt.show()
+
+plt.hist([i*100 for i in e_annual],bins=4,density=True,label='Density Histogram of Residuals of Annual Log Returns',color='b')
+plt.xlabel('Residuals (%)')
+plt.ylabel('Density')
+plt.legend(loc='upper left')    
+plt.grid(True)
+plt.axis([np.min(e_annual*100)*1.2,np.max(e_annual*100)*1.2,0,0.15])
+plt.savefig('Annual_Normaldist.png', dpi=800)
+plt.savefig('Ann_Hist.jpeg', dpi=800,quality=100)
+plt.show()
