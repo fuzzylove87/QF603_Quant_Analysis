@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  8 NOV 2018 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  8 NOV 2018 11:52
 entering extended mode
-**./Groupproject_Part2_V3.tex
-(Groupproject_Part2_V3.tex
+**./Groupproject_Part2_V1.tex
+(Groupproject_Part2_V1.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -545,98 +545,29 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks38
 \verbatim@in@stream=\read2
 )
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustbox
-.sty"
-Package: adjustbox 2018/04/08 v1.1 Adjusting TeX boxes (trim, clip, ...)
-
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.s
-ty"
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\trimclip.
-sty"
-Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
-
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\collectbox\collectb
-ox.sty"
-Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box39
-)
-\tc@llx=\dimen171
-\tc@lly=\dimen172
-\tc@urx=\dimen173
-\tc@ury=\dimen174
-Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex
-.def"
-File: tc-pdftex.def 2018/04/08 v2.1 Clipping driver for pdftex
-))
-\adjbox@Width=\dimen175
-\adjbox@Height=\dimen176
-\adjbox@Depth=\dimen177
-\adjbox@Totalheight=\dimen178
-\adjbox@pwidth=\dimen179
-\adjbox@pheight=\dimen180
-\adjbox@pdepth=\dimen181
-\adjbox@ptotalheight=\dimen182
-
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage
-.sty"
-Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count129
-)
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varwidth.s
-ty"
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box40
-\sift@deathcycles=\count130
-\@vwid@loff=\dimen183
-\@vwid@roff=\dimen184
-))
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
-"
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.st
-y"
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen185
-\captionmargin@=\dimen186
-\captionwidth=\dimen187
-\caption@tempdima=\dimen188
-\caption@indent=\dimen189
-\caption@parindent=\dimen190
-\caption@hangindent=\dimen191
-)
-\c@caption@flags=\count131
-\c@ContinuedFloat=\count132
-)
 ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.s
 ty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip49
-\enit@outerparindent=\dimen192
+\enit@outerparindent=\dimen171
 \enit@toks=\toks39
-\enit@inbox=\box41
-\enitdp@description=\count133
-) (Groupproject_Part2_V3.aux)
-\openout1 = `Groupproject_Part2_V3.aux'.
+\enit@inbox=\box39
+\enitdp@description=\count129
+) (Groupproject_Part2_V1.aux)
+\openout1 = `Groupproject_Part2_V1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -676,16 +607,16 @@ LaTeX Font Info:    ... okay on input line 24.
 ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
-\scratchdimen=\dimen193
-\scratchbox=\box42
-\nofMPsegments=\count135
-\nofMParguments=\count136
+\scratchcounter=\count130
+\scratchdimen=\dimen172
+\scratchbox=\box40
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count137
-\MPscratchDim=\dimen194
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen173
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks41
 )
 ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
@@ -745,80 +676,47 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) ABD: EveryShipout initializing macros
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
- [1
+) ABD: EveryShipout initializing macros [1
 
 {C:/Users/Drow/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<Daily_Scatter.png, id=13, 433.62pt x 289.08pt>
-File: Daily_Scatter.png Graphic file (type png)
-<use Daily_Scatter.png>
-Package pdftex.def Info: Daily_Scatter.png  used on input line 50.
-(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
-<Daily_Hist.png, id=15, 433.62pt x 289.08pt>
-File: Daily_Hist.png Graphic file (type png)
-<use Daily_Hist.png>
-Package pdftex.def Info: Daily_Hist.png  used on input line 56.
-(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 37.
 
 ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
 
-[2 <./Daily_Scatter.png> <./Daily_Hist.png>] [3]
-<Ann_Scatter.png, id=32, 433.62pt x 289.08pt>
-File: Ann_Scatter.png Graphic file (type png)
-<use Ann_Scatter.png>
-Package pdftex.def Info: Ann_Scatter.png  used on input line 151.
-(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
-<Ann_Hist.jpeg, id=33, 1606.0pt x 1069.9975pt>
-File: Ann_Hist.jpeg Graphic file (type jpg)
-<use Ann_Hist.jpeg>
-Package pdftex.def Info: Ann_Hist.jpeg  used on input line 157.
-(pdftex.def)             Requested size: 170.71652pt x 113.73267pt.
- [4 <./Ann_Scatter.png> <./Ann_Hist.jpeg>] [5] [6]
-<worstdays.png, id=44, 858.95906pt x 641.39626pt>
-File: worstdays.png Graphic file (type png)
-<use worstdays.png>
-Package pdftex.def Info: worstdays.png  used on input line 219.
-(pdftex.def)             Requested size: 431.28778pt x 322.04793pt.
-
-Overfull \hbox (0.79999pt too wide) in paragraph at lines 219--221
- [][] 
- []
-
-[7 <./worstdays.png>] [8] (Groupproject_Part2_V3.aux) ) 
+[2] [3] [4] (Groupproject_Part2_V1.aux) ) 
 Here is how much of TeX's memory you used:
- 15697 strings out of 492973
- 307271 string characters out of 3127136
- 361818 words of memory out of 3000000
- 19241 multiletter control sequences out of 15000+200000
+ 13838 strings out of 492973
+ 274319 string characters out of 3127136
+ 330605 words of memory out of 3000000
+ 17420 multiletter control sequences out of 15000+200000
  9322 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,92p,709b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Drow/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Dr
-ow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
-C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Drow/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Drow/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dr
-ow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
-C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr8.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Groupproject_Part2_V3.pdf (8 pages, 1248972 bytes).
+ 62i,6n,56p,500b,217s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Drow/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Drow/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Drow/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
+/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Drow/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Drow/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Drow/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
+Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+17.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr7.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Groupproject_Part2_V1.pdf (4 pages, 172897 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
+ 78 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
