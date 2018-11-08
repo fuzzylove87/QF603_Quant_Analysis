@@ -55,33 +55,30 @@
 			\centering
 			\includegraphics[width=6cm]{Daily_Hist.png}
 			\captionsetup{font=small}
-			\caption{Desity Histogram of Residual}
+			\caption{Density Histogram of Residuals}
 		\end{minipage}
 	\end{figure}
 	
-	\subsection{Estimate of key statistics $\hat{a},\hat{b}$ and $\hat{\sigma_{u}}$}
+	\subsection{Estimate of key statistics $\hat{a}$, $\hat{b}$ and $\hat{\sigma}_{u}$}
 	\setstretch{1.4}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item Alpha = $\hat{a} = 0.00005$, Beta = $\hat{b} = 0.94311$
-		\item Standard Distribution of Residual = $\hat{\sigma_{u}} = 0.00288$
+		\item Standard Deviation of Residuals = $\hat{\sigma}_{u} = 0.00288$
 	\end{itemize}
 
 	The regression can be expressed as $r_{(\textnormal{DJIA}, t)} = 0.00005 +  0.94311 r_{(\textnormal{S\&P500}, t)}$.
 	
-	The positive intercept indicates that the DJIA has a small positive daily excess returns on average as compared to the S\&P. 
+	The alpha, or the intercept coefficient, is a small positive number. If alpha is not statistically different from 0, that means that the intercept of the best fit line is at the origin.
 	
-	The slope of 0.94311 indicates that the DJIA is slightly less volatile than the S\&P. In this context, the slope is interpreted as Beta – the sensitivity of DJIA’s returns to the S\&P’s returns. Assuming investors are risk-averse, a lower Beta is preferred for the same level of return because a lower Beta asset will have more consistency in its returns.
-	  
-	Combining these two measures together, it suggests that the DJIA has a superior risk-adjusted return as compared to the S\&P. 
+	The slope of 0.94311 is the DJIA's is the DJIA's Beta - the sensitivity of DJIA’s returns to the S\&P’s returns. In this model the S\&P is assumed to be the market, therefore the Beta can be construed as the level of systematic risk.
 	
-	
-	\subsection{T-test for Null Hypothesis a=b=0 at 5\% significance}
+	\subsection{T-tests for Null Hypotheses a=0 and b=0 at 5\% Significance}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item T-statistics for $\hat{a} = 1.48636$, and for $\hat{b} = 339.97366$
 		\item Degree of Freedom = $8500 - 2 = 8498$
-		\item Null Hypotheses ($H_0$) are that $a=b=0$.
+		\item Null Hypotheses ($H_0$) are that $a=0 and b=0$.
 		\item Alternative hypotheses ($H_1$) are that $a\ne 0 \quad \textnormal{and} \quad b\ne 0$
 		\item Critical value at 5\% significance level = $\pm1.96024$
 	\end{itemize}
@@ -92,12 +89,12 @@
 	In contrast, for $\hat{b}$, the test statistic lies well beyond the 95\% confidence interval (i.e. significantly exceeds the 5\% critical level). Therefore, we reject the null hypothesis and accept the alternative hypothesis. The slope coefficient $\hat{b}$ is significantly different from 0 at the 5\% significance level.
 	\end{comment}
 	
-	The test statistic for $\hat{a}$ falls within the critical values, and thus we cannot reject the null hypothesis that $\hat{a}=0$. The indication of DJIA having higher daily returns than the S\&P is therefore not significant at the 5\% level.  
+	The test statistic for $\hat{a}$ falls within the critical values, and thus we cannot reject the null hypothesis that $\hat{a}=0$. This indicates that the DJIA having higher daily log returns than the S\&P is therefore not significantly different from 0 at the 5\% level.  
 	
 	However, the test statistic for $\hat{b}$ falls outside the critical values, and thus we reject the null hypothesis that $\hat{b}=0$ and conclude that there is a linear relationship between DJIA and S\&P at the 5\% significance level. 
 	
 	
-	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ values}
+	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ Values}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item R-Squared $(R^2) = 93.1512\%$
@@ -107,19 +104,19 @@
 	The $R^2$ value is very high, further supporting our previous point that there exists a linear relationship between the daily returns of the DJIA and the S\&P.
 	\end{comment}
 
-	The $R^2$ value reports the degree to which our independent variable (the SP500 daily log returns) explains the variation of the dependent variable (the DJIA daily log returns). Since R-square is 93.15120\%, it means that over 90\% of the variation in the dependent variable is explained by the independent variable.
+	The $R^2$ value reports the degree to which our independent variable (the S\&P500's daily log returns) explains the variation of the dependent variable (the DJIA's daily log returns). Since $R^2$ is 93.1512\%, it means that over 90\% of the variation in the dependent variable is explained by the independent variable.
 	
-	$\textnormal{Adj-}R^2$ also measures the goodness of model fitting, but takes into consideration the number of independent variables in the model. $R^2$ will only increase or  stay the same when we add more independent variables, even if they do not have any relationship with the dependent variable. $\textnormal{Adj-}R^2$ on the other hand, will "penalize" the model for having excessive dependent variables that do not significantly improve the model. 
+	$\textnormal{Adj-}R^2$ also measures the goodness of model fitting, but takes into consideration the number of independent variables in the model. $R^2$ will only increase or  stay the same when we add more independent variables, even if they do not have any relationship with the dependent variable. $\textnormal{Adj-}R^2$ on the other hand, will ``penalise'' the model for having excessive dependent variables that do not significantly improve the model. 
 	
 	The $\textnormal{adj-}R^2$ is always lower than the $R^2$ value. And, in our case, because there is only 1 independent variable, the $\textnormal{adj-}R^2$ and the $R^2$ values are relatively equal.
 	
-	\subsection{Jarque-Bera test statistic for the residuals}
+	\subsection{Jarque-Bera Test Statistic for the Residuals}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item Jarque-Bera test stats = 25434.27
 		\item Degrees of Freedom = 2
-		\item Null Hypothesis $H_0 = 0$
-		\item Alternative Hypothesis $H_1 \ne 0$
+		\item Null Hypotheses $H_0$: $\hat{\gamma} = 0$, $\hat{\kappa} = 3$
+		\item Alternative Hypotheses $H_1$: $\hat{\gamma} \ne 0$, $\hat{\kappa} \ne 3$
 		\item Critical Chi-Square Value at 5\% significance level = 5.99146
 	\end{itemize}
 	
@@ -130,17 +127,17 @@
 	distribution of the errors are normally distributed (under a certain level of significance).
 	\end{comment}
 
-	\subsection{Additional test-$H_0$: $\hat{b}=1$}
+	\subsection{Additional Test-$H_0$: $\hat{b}=1$}
 	\underline{Results}
 	\begin{itemize}[nosep]
-		\item The t-test statistic for $\hat{b}=1$=-20.50787
+		\item The t-test statistic for $H_{0}:$ $\hat{b}=1$ is $-20.50787$
 		\item Degree of Freedom= $8500 - 2 = 8498$
-		\item Null Hypothesis ($H_0$) is that $\hat{b}=1$
-		\item Alternative hypothesis ($H_1$) is that $\hat{b} \ne 1$
+		\item Null Hypotheses ($H_0$) is that $\hat{b}=1$
+		\item Alternative hypotheses ($H_1$) is that $\hat{b} \ne 1$
 		\item Critical value at 5\% significance level = $\pm 1.96024$
 	\end{itemize}
 
-	We conduct an additional test of $\hat{b}=1$ at the 5\% significance level to determine if our $\hat{b}$ value of 0.94311 is statistically different from 1. We do this to gauge how well the returns of the DJIA mimic the returns of the market portfolio S\&P.
+	We conduct an additional test of  $H_{0}:$ $\hat{b}=1$ at the 5\% significance level to determine if our $\hat{b}$ value of 0.94311 is statistically different from 1. We do this to gauge how well the returns of the DJIA mimic the returns of the market portfolio S\&P.
 	
 	We reject the null hypothesis that $\hat{b}=1$, and conclude that the daily log returns of the DJIA do not perfectly mimic the returns of the S\&P. Therefore, using the DJIA as a benchmark for performance evaluation may lead to different results as compared to when using the S\&P as the benchmark. 
 		
@@ -153,39 +150,36 @@
 			\centering
 			\includegraphics[width=6cm]{Ann_Scatter.png}
 			\captionsetup{font=small}
-			\caption{Regression Line of Annual Log Return}
+			\caption{Scatter Plot and Regression Line of Daily Log Returns}
 		\end{minipage}
 		\begin{minipage}[t]{0.48\textwidth}
 			\centering
 			\includegraphics[width=6cm]{Ann_Hist.png}
 			\captionsetup{font=small}
-			\caption{Density Histogram of Residual}
+			\caption{Density Histogram of Residuals}
 		\end{minipage}
 	\end{figure}
 	
-	\subsection{Estimate of key statistics $\hat{a}$,$\hat{b}$ and $\hat{\sigma_u}$}
+	\subsection{Estimate of Key Statistics $\hat{a}$, $\hat{b}$ and $\hat{\sigma_u}$}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item Alpha = $\hat{a} = 0.01978$, Beta = $\hat{b} = 0.84254$
-		\item Standard Distribution of Residual = $\hat{\sigma_{u}} = 0.03797$
+		\item Standard Deviation of Residuals = $\hat{\sigma}_{u} = 0.03797$
 	\end{itemize}
 
     The regression can be expressed as $r_{(\textnormal{DJIA}, t)} = 0.01978 +  0.84254 r_{(\textnormal{S\&P500}, t)}$.
 	
-	The positive intercept indicates that the DJIA has a small positive daily excess returns on average as compared to the S\&P. 
+	The alpha, or the intercept coefficient, is a small positive number. If alpha is not statistically different from 0, that means that the intercept of the best fit line is at the origin.
 	
-	The slope of 0.8425 indicates that the DJIA is slightly less volatile than the S\&P. 
-	
-	Combining these two measures together, it suggests that the DJIA has a superior risk-adjusted return as compared to the S\&P. 
-	
-	
-	\subsection{T-test for Null Hypothesis a=b=0 at 5\% significance}
+	The slope of 0.8425 is the DJIA's Beta - the sensitivity of DJIA’s returns to the S\&P’s returns. In this model the S\&P is assumed to be the market, therefore the Beta can be construed as the level of systematic risk.
+		
+	\subsection{T-tests for Null Hypotheses a=0 and b=0 at 5\% Significance}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item T-statistics for $\hat{a} = 2.64989$, and for $\hat{b} = 20.4364$
-		\item Degree of Freedom = $32 - 2 = 30$
-		\item Null Hypothesis ($H_0$) are that $a=b=0$.
-		\item Alternative hypothesis ($H_1$) are that $a\ne 0 \quad \textnormal{and} \quad b\ne 0$
+		\item Degrees of Freedom = $32 - 2 = 30$
+		\item Null Hypotheses ($H_0$) are that $a=0 and b=0$.
+		\item Alternative hypotheses ($H_1$) are that $a\ne 0 \quad \textnormal{and} \quad b\ne 0$
 		\item Critical value at 5\% significance level = $\pm2.042272$
 	\end{itemize}
 
@@ -193,7 +187,7 @@
     
     The test statistic for $\hat{b}$ also falls outside the critical values, and thus we reject the null hypothesis that $\hat{b}$=0 and conclude that there is a linear relationship between the annual returns of the DJIA and the S\&P at the 5\% significance level.
 
-	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ values}
+	\subsection{Goodness of Fit: $R^2$ and Adjusted $R^2$ Values}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item R-Squared $(R^2) = 93.2983\%$
@@ -202,13 +196,14 @@
 
      The $R^2$ value is very high, further supporting our previous point that there exists a linear relationship between the annual returns of the DJIA and the S\&P.
 	
-	\subsection{Jarque-Bera test statistic for the residuals}
+	\newpage
+	\subsection{Jarque-Bera Test Statistic for the Residuals}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item Jarque-Bera test stats = 25434.27
 		\item Degrees of Freedom = 2
-		\item Null Hypothesis $H_0 = 0$
-		\item Alternative Hypothesis $H_1 \ne 0$
+		\item Null Hypotheses $H_0$: $\hat{\gamma} = 0$, $hat{\kappa} = 3$
+		\item Alternative Hypotheses $H_1$: $\hat{\gamma} \ne 0$, $\hat{\kappa} \ne 3$
 		\item Critical Chi-Square Value at 5\% significance level = 5.99146
 	\end{itemize}
 	
@@ -218,22 +213,23 @@
 	
 	When we plot the top 100 ``worst day" (i.e. largest loss) log returns by month, we can see that most of the worst days do not even fall in December, let alone the 31st. Clearly, there is a greater number of outliers ``included" in the daily return residuals. 
 	
+	\newpage
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.6\linewidth, frame]{worstdays.png}
+		\includegraphics[width=\linewidth, frame]{worstdays.png}
 		\captionsetup{font=small}
 		\caption{Chart of Top 100 Largest Negative Log Returns}
 	\end{figure}
 	
 	The exclusion of these outliers in the annual log return regression probably "saved" it from failing the JB test. 
 	
-	\subsection{Additional test-$H_0$: $\hat{b}=1$}
+	\subsection{Additional Test-$H_0$: $\hat{b}=1$}
 	\underline{Results}
 	\begin{itemize}[nosep]
 		\item The t-test statistic for $\hat{b}=1$=-3.81917
 		\item Degree of Freedom=$32 - 2 = 30$
-		\item Null Hypothesis ($H_0$) is that $\hat{b}=1$
-		\item Alternative hypothesis ($H_1$) is that $\hat{b} \ne 1$
+		\item Null Hypotheses ($H_0$) is that $\hat{b}=1$
+		\item Alternative hypotheses ($H_1$) is that $\hat{b} \ne 1$
 		\item Critical value at 5\% significance level = $\pm 1.96024$
 	\end{itemize}
 	
