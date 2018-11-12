@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  8 NOV 2018 10:47
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.1)  8 NOV 2018 11:55
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 entering extended mode
 **./Groupproject_Part2_V3.tex
 (Groupproject_Part2_V3.tex
 LaTeX2e <2018-04-01> patch level 5
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -20,17 +30,25 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
 "
 Package: babel 2018/06/05 3.22 The Babel package
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.de
 f"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2018/06/05 3.22 The Babel package
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: switch.def 2018/06/05 3.22 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
 "
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
@@ -42,24 +60,45 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
 "
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\engli
+sh.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: babel.def 2018/06/05 3.22 Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.
 def")
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.de
+f")
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \bbl@dirlevel=\count89
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
 "
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry
 .sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
@@ -80,6 +119,28 @@ Package ifvtex Info: VTeX not detected.
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex
 .sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.s
+ty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.st
+y"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.s
+ty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.s
+ty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count90
@@ -95,14 +156,22 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks17
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry
 .cfg"))
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.s
 ty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.c
+fg"))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty
+"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
+<<<<<<< HEAD
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.s
 ty"
@@ -110,16 +179,30 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.st
 y"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.sty
+"
+Package: amstext 2000/06/29 v2.01 AMS text
+ ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty
+"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen112
 ))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.st
 y"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen113
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.st
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen113
+) ("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.st
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 y"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
@@ -161,6 +244,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspace
 .sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -181,24 +265,59 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 .tex"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutil
 s.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspace.s
+ty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\todonotes\todonotes
+.sty"
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty
+"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.t
+ex"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.
+tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
 )
 \XKV@depth=\count105
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 "
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\colo
 r.cfg"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.
+cfg"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdft
 ex.def"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex
+.def"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 )
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
@@ -211,6 +330,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer
 \tikz.sty"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pg
@@ -219,10 +339,21 @@ f.sty"
 rcs.sty"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\p
 gfutil-common.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\t
+ikz.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.
+sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrc
+s.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+util-common.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \pgfutil@everybye=\toks25
 \pgfutil@tempdima=\dimen121
 \pgfutil@tempdimb=\dimen122
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\p
 gfutil-common-lists.tex"))
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\p
@@ -234,10 +365,24 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\p
 gfrcs.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+util-common-lists.tex"))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+util-latex.def"
+\pgfutil@abb=\box28
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+rcs.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pg
 fcore.sty"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx
@@ -254,6 +399,23 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\grap
 hics.cfg"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfc
+ore.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.s
+ty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.s
+ty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphi
+cs.cfg"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
@@ -261,6 +423,7 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@height=\dimen123
 \Gin@req@width=\dimen124
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\p
 gfsys.sty"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer
@@ -274,6 +437,21 @@ gfkeys.code.tex"
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\p
 gfkeysfiltered.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgf
+sys.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gfsys.code.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+keys.code.tex"
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+keysfiltered.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \pgfkeys@tmptoks=\toks28
 ))
 \pgf@x=\dimen125
@@ -294,12 +472,18 @@ gfkeysfiltered.code.tex"
 \t@pgf@tokb=\toks30
 \t@pgf@tokc=\toks31
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer
 \pgf.cfg"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gf.cfg"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer
 \pgfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
@@ -310,10 +494,23 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer
 \pgfsyssoftpath.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gfsys-pdftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gfsyssoftpath.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count110
 \pgfsyssoftpath@bigbuffer@items=\count111
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer
 \pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -330,6 +527,24 @@ hcalc.code.tex"
 hutil.code.tex")
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmat
 hparser.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
+gfsysprotocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcore.code.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
+code.tex"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathc
+alc.code.tex"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathu
+til.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathp
+arser.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \pgfmath@dimen=\dimen133
 \pgfmath@count=\count112
 \pgfmath@box=\box29
@@ -337,6 +552,7 @@ hparser.code.tex"
 \pgfmath@stack@operand=\toks33
 \pgfmath@stack@operation=\toks34
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmat
 hfunctions.code.tex"
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmat
@@ -361,6 +577,32 @@ hfloat.code.tex"
 ))
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcorepoints.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.code.tex"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.basic.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.trigonometric.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.random.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.comparison.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.base.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.round.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.misc.code.tex")
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+unctions.integerarithmetics.code.tex")))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
+loat.code.tex"
+\c@pgfmathroundto@lastzeros=\count113
+))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorepoints.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen134
 \pgf@picmaxx=\dimen135
@@ -377,26 +619,42 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen146
 \pgf@zy=\dimen147
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcorepathconstruct.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorepathconstruct.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen148
 \pgf@path@lasty=\dimen149
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcorepathusage.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorepathusage.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen150
 \pgf@shorten@start@additional=\dimen151
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcorescopes.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorescopes.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
 \pgf@picture@serial@count=\count114
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
@@ -404,11 +662,21 @@ File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcoretransformations.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoregraphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen152
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoretransformations.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen153
 \pgf@pt@y=\dimen154
 \pgf@pt@temp=\dimen155
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -428,10 +696,32 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcoreshade.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorequick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorepathprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen156
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoreshade.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen157
 \pgf@sys@shading@range@num=\count115
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\
 pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -464,10 +754,45 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility
 \pgfcomp-version-0-65.sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box33
+))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcoretransparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
+fcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
+duleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box34
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
+duleplot.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\p
+gfcomp-version-0-65.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen158
 \pgf@nodesepend=\dimen159
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility
 \pgfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
@@ -488,17 +813,48 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmat
 h.code.tex")
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\compatibility\p
+gfcomp-version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgffo
+r.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\utilities\pgfke
+ys.sty"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+keys.code.tex"))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\math\pgfmath.st
+y"
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
+code.tex"))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
+for.code.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.
+code.tex")
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 \pgffor@iter=\dimen160
 \pgffor@skip=\dimen161
 \pgffor@stack=\toks35
 \pgffor@toks=\toks36
 ))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlay
 er\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\p
 gflibraryplothandlers.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\tikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
+libraryplothandlers.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count116
 \pgfplotmarksize=\dimen162
@@ -518,8 +874,13 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count119
 \tikz@fig@count=\count120
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgf
 modulematrix.code.tex"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
+dulematrix.code.tex"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count121
 \pgfmatrixcurrentcolumn=\count122
@@ -527,6 +888,7 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count124
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlay
 er\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
@@ -536,6 +898,17 @@ er\tikz\libraries\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\calc.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count125
 \calc@Bcount=\count126
@@ -550,13 +923,18 @@ LaTeX Info: Redefining \addtolength on input line 81.
 )
 \c@@todonotes@numberoftodonotes=\count128
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.st
 y"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks37
 \verbatim@line=\toks38
 \verbatim@in@stream=\read2
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustb
 ox.sty"
 Package: adjustbox 2018/04/08 v1.1 Adjusting TeX boxes (trim, clip, ...)
@@ -572,6 +950,23 @@ Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\collectbox\collec
 tbox.sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjustbox
+.sty"
+Package: adjustbox 2018/04/08 v1.1 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.s
+ty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\trimclip.
+sty"
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\collectbox\collectb
+ox.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box39
 )
@@ -581,8 +976,13 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen174
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tc-pdft
 ex.def"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex
+.def"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 File: tc-pdftex.def 2018/04/08 v2.1 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen175
@@ -594,6 +994,7 @@ File: tc-pdftex.def 2018/04/08 v2.1 Clipping driver for pdftex
 \adjbox@pdepth=\dimen181
 \adjbox@ptotalheight=\dimen182
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpa
 ge.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
@@ -601,18 +1002,36 @@ Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
 )
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varwidth
 .sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage
+.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count129
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\varwidth\varwidth.s
+ty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box40
 \sift@deathcycles=\count130
 \@vwid@loff=\dimen183
 \@vwid@roff=\dimen184
 ))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.s
 ty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.
 sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.st
+y"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen185
@@ -626,8 +1045,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@caption@flags=\count131
 \c@ContinuedFloat=\count132
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem
 .sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.s
+ty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip49
 \enit@outerparindent=\dimen192
@@ -685,8 +1109,13 @@ LaTeX Font Info:    ... okay on input line 24.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.m
 kii"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
+i"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
 \scratchdimen=\dimen193
@@ -700,6 +1129,7 @@ kii"
 \makeMPintoPDFobject=\count139
 \everyMPtoPDFconversion=\toks41
 )
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf
 -base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -734,6 +1164,42 @@ Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluat
 ex.sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
+ase.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarer
+r.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty
+"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefine
+keys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.
+sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.
+sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkey
+s.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds
+.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex
+.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -742,8 +1208,13 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+<<<<<<< HEAD
 ("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftex
 cmds.sty"
+=======
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcm
+ds.sty"
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -762,15 +1233,24 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  [1
 
+<<<<<<< HEAD
 {C:/Users/Misaka/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <Daily_Scatter.png, id=13, 433.62pt x 289.08pt>
 File: Daily_Scatter.png Graphic file (type png)
 <use Daily_Scatter.png>
 Package pdftex.def Info: Daily_Scatter.png  used on input line 50.
+=======
+{C:/Users/Drow/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+<Daily_Scatter.png, id=13, 433.62pt x 289.08pt>
+File: Daily_Scatter.png Graphic file (type png)
+<use Daily_Scatter.png>
+Package pdftex.def Info: Daily_Scatter.png  used on input line 46.
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 (pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
 <Daily_Hist.png, id=15, 433.62pt x 289.08pt>
 File: Daily_Hist.png Graphic file (type png)
 <use Daily_Hist.png>
+<<<<<<< HEAD
 Package pdftex.def Info: Daily_Hist.png  used on input line 56.
 (pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
@@ -780,11 +1260,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+=======
+Package pdftex.def Info: Daily_Hist.png  used on input line 52.
+(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+
+("C:\Users\Drow\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
 
 [2 <./Daily_Scatter.png> <./Daily_Hist.png>] [3]
 <Ann_Scatter.png, id=32, 433.62pt x 289.08pt>
 File: Ann_Scatter.png Graphic file (type png)
 <use Ann_Scatter.png>
+<<<<<<< HEAD
 Package pdftex.def Info: Ann_Scatter.png  used on input line 151.
 (pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
 <Ann_Hist.png, id=33, 433.62pt x 289.08pt>
@@ -800,18 +1292,41 @@ Package pdftex.def Info: worstdays.png  used on input line 219.
 (pdftex.def)             Requested size: 431.28778pt x 322.04793pt.
 
 Overfull \hbox (0.79999pt too wide) in paragraph at lines 219--221
+=======
+Package pdftex.def Info: Ann_Scatter.png  used on input line 147.
+(pdftex.def)             Requested size: 170.71652pt x 113.8126pt.
+<Ann_Hist.jpeg, id=33, 1606.0pt x 1069.9975pt>
+File: Ann_Hist.jpeg Graphic file (type jpg)
+<use Ann_Hist.jpeg>
+Package pdftex.def Info: Ann_Hist.jpeg  used on input line 153.
+(pdftex.def)             Requested size: 170.71652pt x 113.73267pt.
+ [4 <./Ann_Scatter.png> <./Ann_Hist.jpeg>] [5] [6]
+<worstdays.png, id=44, 858.95906pt x 641.39626pt>
+File: worstdays.png Graphic file (type png)
+<use worstdays.png>
+Package pdftex.def Info: worstdays.png  used on input line 215.
+(pdftex.def)             Requested size: 431.28778pt x 322.04793pt.
+
+Overfull \hbox (0.79999pt too wide) in paragraph at lines 215--217
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
  [][] 
  []
 
 [7 <./worstdays.png>] [8] (Groupproject_Part2_V3.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  15696 strings out of 492973
  307896 string characters out of 3126249
+=======
+ 15697 strings out of 492973
+ 307271 string characters out of 3127136
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
  361818 words of memory out of 3000000
  19241 multiletter control sequences out of 15000+200000
  9322 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,8n,92p,709b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
+<<<<<<< HEAD
 <C:/Users/Misaka/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/
 Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.p
@@ -831,6 +1346,27 @@ ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 Output written on Groupproject_Part2_V3.pdf (8 pages, 1366850 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
+=======
+<C:/Users/Drow/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Dr
+ow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
+C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmmi10.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Drow/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Drow/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Dr
+ow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr8.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr9.pfb><C:/Users/Drow/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Groupproject_Part2_V3.pdf (8 pages, 1248871 bytes).
+PDF statistics:
+ 93 PDF objects out of 1000 (max. 8388607)
+>>>>>>> 9476fc620a93964ee1d79334085176d6134b95b0
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
