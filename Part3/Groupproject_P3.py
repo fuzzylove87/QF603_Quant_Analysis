@@ -107,6 +107,9 @@ AIC_FF_notes,AIC_FF_mlr = get_AIC(RSS_FF,sample_size,FF_beta.shape[0])
 
 f_test = get_F_stats(RSS_CAPM,RSS_FF,sample_size,FF_beta.shape[0],4)
 
+#Adding graphs
+
+
 print("Task 5\n")
 
 print("1.FF 5 factors: a_hat: %0.5f , b_hat: %0.5f, c_hat: %0.5f, d_hat: %0.5f, e_hat: %0.5f, f_hat: %0.5f" % (FF_beta[0],FF_beta[1],FF_beta[2],FF_beta[3],FF_beta[4],FF_beta[5]))
