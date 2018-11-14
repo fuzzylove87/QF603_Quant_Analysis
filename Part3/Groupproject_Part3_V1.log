@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  14 NOV 2018 22:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  14 NOV 2018 23:00
 entering extended mode
 **./Groupproject_Part3_V1.tex
 (Groupproject_Part3_V1.tex
@@ -634,7 +634,11 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks39
 \enit@inbox=\box41
 \enitdp@description=\count133
-) (Groupproject_Part3_V1.aux)
+) (Groupproject_Part3_V1.aux
+
+LaTeX Warning: Label `sec:introduction' multiply defined.
+
+)
 \openout1 = `Groupproject_Part3_V1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -760,23 +764,61 @@ G,.JBIG2,.JB2,.eps]
 ) ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ [1
 
-! I can't write on file `Groupproject_Part3_V1.pdf'.
-Please type another file name for output
-! Emergency stop.
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.31 \newpage
-             
-*** (job aborted, file error in nonstop mode)
+{C:/Users/Misaka/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
 
- 
+("C:\Users\Misaka\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
+<CAPM_regression.jpeg, id=15, 433.62pt x 289.08pt>
+File: CAPM_regression.jpeg Graphic file (type jpg)
+<use CAPM_regression.jpeg>
+Package pdftex.def Info: CAPM_regression.jpeg  used on input line 46.
+(pdftex.def)             Requested size: 431.28778pt x 287.53984pt.
+
+[2 <./CAPM_regression.jpeg>]
+<FF_regression.jpeg, id=22, 433.62pt x 289.08pt>
+File: FF_regression.jpeg Graphic file (type jpg)
+<use FF_regression.jpeg>
+Package pdftex.def Info: FF_regression.jpeg  used on input line 64.
+(pdftex.def)             Requested size: 431.28778pt x 287.53984pt.
+ [3 <./FF_regression.jpeg>] [4] [5] [6]
+(Groupproject_Part3_V1.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 15643 strings out of 492973
- 306806 string characters out of 3126249
- 357804 words of memory out of 3000000
- 19199 multiletter control sequences out of 15000+200000
- 9021 words of font info for 33 fonts, out of 3000000 for 9000
+ 15686 strings out of 492973
+ 307720 string characters out of 3126249
+ 359850 words of memory out of 3000000
+ 19231 multiletter control sequences out of 15000+200000
+ 10160 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,6n,92p,544b,189s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 62i,6n,92p,573b,418s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmbx9.pfb><C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Misaka/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Misaka/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users
+/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
+pfb><C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Misaka/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Misaka/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Mis
+aka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+C:/Users/Misaka/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb>
+Output written on Groupproject_Part3_V1.pdf (6 pages, 2234755 bytes).
+PDF statistics:
+ 78 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+
