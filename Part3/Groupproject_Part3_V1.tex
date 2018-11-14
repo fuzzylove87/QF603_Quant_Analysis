@@ -12,7 +12,6 @@
 \setlength{\parskip}{\baselineskip}
 \setlength{\parindent}{0pt}
 
-
 \usepackage{enumitem}
 
 \title{QF603 Group Mini-Project 3}
@@ -26,7 +25,7 @@
 	
 	\begin{abstract}
 	\vspace{6pt}
-		balabala
+		In this report we performed 2 OLS regressions to understand the explanatory power of a number of factors - specifically those proposed by the CAPM and the Fama-French 5-Factor model. We observed that the factor with the most explanatory power is the market risk premium (Mkt-RF), as it has the largest t-test statistic. Overall, both models have high explanatory power as their adjusted $R^2$s are very close to 1.0. However, the 5-Factor model is deemed to be slightly better than the CAPM model.
 	\end{abstract}
 
 \newpage
@@ -44,7 +43,7 @@
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\linewidth, frame]{CAPM_regression.jpeg}
+	\includegraphics[width= \linewidth]{CAPM_regression.jpeg}
 	\captionsetup{font=small}
 	\caption{CAPM Regression Line}
 \end{figure}
@@ -62,19 +61,20 @@
 \newpage
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=\linewidth, frame]{FF_regression.jpeg}
+	\includegraphics[width= \linewidth]{FF_regression.jpeg}
 	\captionsetup{font=small}
 	\caption{Five Factor Regression Line}
 \end{figure}
 
 \underline{Explanation}
 
-Even after we added four more explanatory variables in the regression model, $\hat{b}$ the coefficient for the Mkt-RF explanatory variable and a measure of systematic risk, affects the dependent variable the most per unit of change of the explanatory variable. 
+Even after we added four more explanatory variables in the regression model, $\hat{b}$ the coefficient for the Mkt-RF explanatory variable and a measure of systematic risk, affects the dependent variable the most per unit change of the explanatory variable. 
 
-$\hat{b}$ is greater than all the other coefficients combined, in absolute terms. The big correspondence between the returns of the market and the S\&P 500 can show why the S\&P 500 is often used as a proxy for the U.S. equity market so far.
+$\hat{b}$ is greater than all the other coefficients combined, in absolute terms. The big correspondence between the returns of the market and the S\&P 500 shows why the S\&P 500 has often been used as a proxy for the U.S. equity market so far.
 
 We also noted that the regression coefficient for the SMB (Small Minus Big) explanatory variable, $\hat{c}$, is negative and statistically different from 0 (see the t-test results in the next part). This makes intuitive sense as the S\&P 500 is made up of large cap companies, and as such should have its excess returns “penalised” to adjust for the “size effect” on returns. The “size effect”, also known as the “small firm” effect, is the proposition that smaller cap companies tend to outperform larger cap companies.
 
+\newpage
 \subsection{t-Test Results for Regression Coefficients}
 \underline{Results for t-test}
 \begin{itemize}
@@ -94,11 +94,14 @@ We also note that the t-statistic for the $\hat{b}$ coefficient is extremely hig
 
 We also conclude with a high level of confidence that linear relationships exist between the excess returns of the S\&P 500 index and each of Fama-French’s five factors – Mkt-Rf, SMB, HML, RMW, and CMA. 
 
+\newpage
 \subsection{$R^2$ and Adjusted $R^2$}
 \underline{Results}
 \begin{itemize}
-	\item $R^2$=0.993902
-	\item Adjusted $R^2$=0.993826
+	\item 5-Factor $R^2$=0.993902
+	\item 5-Factor Adjusted $R^2$=0.993826
+	\item CAPM $R^2$=0.975404
+	\item CAPM Adjusted $R^2$=0.975343
 \end{itemize}
 
 \underline{Explanation}
@@ -110,7 +113,8 @@ Furthermore, we found that the adjusted $R^2$ of the Fama-French 5-Factor model 
 \subsection{Akaike Information Criterion (AIC)}
 \underline{Result}
 \begin{itemize}
-	\item AIC=-4605.61
+	\item 5-Factor AIC = -4605.61
+	\item CAPM AIC = -4050.15
 \end{itemize}
 
 \underline{Explanation}
