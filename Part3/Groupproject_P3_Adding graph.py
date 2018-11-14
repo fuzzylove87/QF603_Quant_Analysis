@@ -46,7 +46,7 @@ def get_t_stats(RSS,n,k,beta_hat,Zi):
 def get_AIC(RSS,n,k):
     vr = RSS/(n-k)
     vr = float(vr)
-    return  ((n*np.log(RSS/n)+ 2*k),np.log(vr)+ 2*k/n)
+    return  (n*np.log(RSS/n)+ 2*k)
 
 #F-test stats
 def get_F_stats(RSS,URSS,T,K,m):
@@ -96,6 +96,7 @@ RSS_CAPM = get_RSS(CAPM_beta,x_CAPM_One,y)
 
 #t-stats
 t_FF = get_t_stats(RSS_FF,sample_size,FF_beta.shape[0],FF_beta,Zi_FF)
+t_CAPM = get_t_stats(RSS_CAPM,sample_size,CAPM_beta.shape[0],CAPM_beta,Zi_CAPM)
 
 #t-critcal values
 t_critical_value = stats.t.ppf(1-0.025, sample_size-len(FF_beta))
@@ -103,9 +104,11 @@ t_critical_value = stats.t.ppf(1-0.025, sample_size-len(FF_beta))
 #R square and adjusted R square
 TSS = get_TSS(y)
 R2,R_bar2 = get_R2_AdjustedR2 (RSS_FF,TSS,sample_size,FF_beta.shape[0])
+R2_CAPM,R_bar2_CAPM = get_R2_AdjustedR2 (RSS_CAPM,TSS,sample_size,CAPM_beta.shape[0])
 
 #AIC FF
-AIC_FF_notes,AIC_FF_mlr = get_AIC(RSS_FF,sample_size,FF_beta.shape[0])
+AIC_FF = get_AIC(RSS_FF,sample_size,FF_beta.shape[0])
+AIC_CAPM = get_AIC(RSS_CAPM,sample_size,CAPM_beta.shape[0])
 
 f_test = get_F_stats(RSS_CAPM,RSS_FF,sample_size,FF_beta.shape[0],4)
 
@@ -128,7 +131,7 @@ plt.title('CAPM',fontsize=15)
 plt.ylabel('Expected Return (%)', fontsize=12)
 plt.xlabel('Mkt-RF (%)', fontsize=12)
 plt.legend()
-plt.savefig('CAPM_regression.jpeg', dpi=800,quality=100)
+#plt.savefig('CAPM_regression.jpeg', dpi=800,quality=100)
 plt.show()
 
 plt.scatter(FF_Y_hat_chart, y_chart, color='r', s=4, label = 'Scatter plot of two variables')
@@ -137,7 +140,7 @@ plt.title('Fama French Five-Factor Model',fontsize=15)
 plt.ylabel('Expected Return (%)', fontsize=12)
 plt.xlabel('Predicted Dependent Variable (%)', fontsize=12)
 plt.legend()
-plt.savefig('FF_regression.jpeg', dpi=800,quality=100)
+#plt.savefig('FF_regression.jpeg', dpi=800,quality=100)
 plt.show()
 
 print("Task 5\n")
@@ -145,9 +148,12 @@ print("Task 5\n")
 print("1.FF 5 factors: a_hat: %0.5f , b_hat: %0.5f, c_hat: %0.5f, d_hat: %0.5f, e_hat: %0.5f, f_hat: %0.5f" % (FF_beta[0],FF_beta[1],FF_beta[2],FF_beta[3],FF_beta[4],FF_beta[5]))
 print("1.CAPM factors: a_hat: %0.5f , b_hat: %0.5f" % (CAPM_beta[0],CAPM_beta[1]))
 print("2.t_stats: a_hat:%0.5f , b_hat: %0.5f, c_hat: %0.5f, d_hat: %0.5f, e_hat: %0.5f, f_hat: %0.5f" % (t_FF[0],t_FF[1],t_FF[2],t_FF[3],t_FF[4],t_FF[5]))
+print("2.t_stats: a_hat:%0.5f , b_hat: %0.5f" % (t_CAPM[0],t_CAPM[1]))
 print("3.Critical values for 5 percent significance level: +%0.5f , -%0.5f" % (t_critical_value,t_critical_value))
-print("4.R_bar and Adjusted R_bar: %0.5f , %0.5f" % (R2,R_bar2))
-print("5.AIC from notes : %0.5f; AIC from mlr0.py: %0.5f " % (AIC_FF_notes,AIC_FF_mlr))
+print("4.R_bar and Adjusted R_bar for FF: %0.5f , %0.5f" % (R2,R_bar2))
+print("4.R_bar and Adjusted R_bar for CAPM: %0.5f , %0.5f" % (R2_CAPM,R_bar2_CAPM))
+print("5.AIC for FF: %0.5f" % AIC_FF)
+print("5.AIC from CAPM: %0.5f" % (AIC_CAPM))
 
 print("\nTask 6\n")
 print("1.F-test statistics: %0.5f " % f_test)
