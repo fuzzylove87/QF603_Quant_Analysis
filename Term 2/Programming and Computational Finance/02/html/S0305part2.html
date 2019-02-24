@@ -1,0 +1,1191 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>S0305part2</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-11-07"><meta name="DC.source" content="S0305part2.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2"><b>How to ...</b></a></li><li><a href="#3">HT001: Use one command to import data from a CSV file, <tt>HT001a.csv</tt> , using the first row as column labels, and the first column as row labels. Name the data imported as <tt>data</tt>.</a></li><li><a href="#8">HT002: Use an appropriate position-based indexing/slicing method to select data in data.</a></li><li><a href="#21">HT003: Use an appropriate label-based indexing/slicing method to select data in <tt>data</tt>.</a></li><li><a href="#31">HT004: Add a column to <tt>data</tt></a></li><li><a href="#51">HT005: Add a row to <tt>data</tt></a></li><li><a href="#54">HT006: Delete a row from <tt>data</tt></a></li><li><a href="#60">How to swap two values in variables <tt>a</tt> and <tt>b</tt>?</a></li><li><a href="#64">HT007: Swap two rows/columns in <tt>data</tt></a></li><li><a href="#74">HT008: Apply a function to each row/column of <tt>data</tt></a></li><li><a href="#78">HT009: Basic operations on two rows/columns of <tt>data</tt></a></li><li><a href="#83">HT010: Sort <tt>data</tt></a></li></ul></div><pre class="codeinput">clear;
+clc;
+</pre><h2 id="2"><b>How to ...</b></h2><h2 id="3">HT001: Use one command to import data from a CSV file, <tt>HT001a.csv</tt> , using the first row as column labels, and the first column as row labels. Name the data imported as <tt>data</tt>.</h2><pre class="codeinput"><span class="comment">% slide 169</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+</pre><pre class="codeoutput">
+data =
+
+  4&times;4 table
+
+         b    c    d    e
+         _    _    _    _
+
+    0    1    2    3    4
+    1    5    6    7    8
+    2    9    8    7    6
+    3    5    4    3    2
+
+</pre><p><b>What if the file is <tt>newfolder\newfile.csv</tt> ?</b></p><pre class="codeinput"><span class="comment">% slide 171 (Windows)</span>
+data=readtable(<span class="string">'newfolder\newfile.csv'</span>)
+
+<span class="comment">% slide 171 (Mac)</span>
+<span class="comment">% data=readtable('newfolder\newfile.csv')</span>
+</pre><pre class="codeoutput error">Error using readtable (line 216)
+Unable to open file 'newfolder\newfile.csv'.
+
+Error in S0305part2 (line 16)
+data=readtable('newfolder\newfile.csv')
+</pre><p><b>What if the labels are as in <tt>HT001b.csv</tt> ?</b></p><pre class="codeinput"><span class="comment">% slide 173</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+</pre><p><b>column labels</b></p><pre class="codeinput"><span class="comment">% slide 174 (1)</span>
+data.Properties.VariableNames
+</pre><p><b>row labels</b></p><pre class="codeinput"><span class="comment">% slide 174 (2)</span>
+data.Properties.RowNames
+</pre><h2 id="8">HT002: Use an appropriate position-based indexing/slicing method to select data in data.</h2><p><b>position-based indexing</b></p><pre class="codeinput"><span class="comment">% slide 176 (1)</span>
+data{1,1}
+</pre><pre class="codeinput"><span class="comment">% slide 176 (2)</span>
+data(1,1)
+</pre><p><b>position-based slicing (1)</b></p><pre class="codeinput"><span class="comment">% slide 178 (1)</span>
+data{1:2, 1:2}
+</pre><pre class="codeinput"><span class="comment">% slide 178 (2)</span>
+data(1:2, 1:2)
+</pre><p><b>position-based slicing (2): the 1st row</b></p><pre class="codeinput"><span class="comment">% slide 180 (1)</span>
+data{1, :}
+</pre><pre class="codeinput"><span class="comment">% slide 180 (2)</span>
+data(1, :)
+</pre><p><b>position-based slicing (3): the 1st column</b></p><pre class="codeinput"><span class="comment">% slide 182 (1)</span>
+data{:, 1}
+</pre><pre class="codeinput"><span class="comment">% slide 182 (2)</span>
+data(:, 1)
+</pre><p><b><tt>data{:,:}</tt></b></p><pre class="codeinput"><span class="comment">% slide 184 (1)</span>
+data{:,:}
+</pre><p><b><tt>data(:,:)</tt></b></p><pre class="codeinput"><span class="comment">% slide 184 (2)</span>
+data(:,:)
+</pre><p><b>fancy indexing</b></p><pre class="codeinput"><span class="comment">% slide 186 (1)</span>
+data{[3 1],[1 2]}
+</pre><pre class="codeinput"><span class="comment">% slide 186 (2)</span>
+data([3 1],[1 2])
+</pre><h2 id="21">HT003: Use an appropriate label-based indexing/slicing method to select data in <tt>data</tt>.</h2><p><b>label-based indexing</b></p><pre class="codeinput"><span class="comment">% slide 188 (1)</span>
+data{<span class="string">'2'</span>,<span class="string">'b'</span>}
+</pre><pre class="codeinput"><span class="comment">% slide 188 (2)</span>
+data(<span class="string">'2'</span>,<span class="string">'b'</span>)
+</pre><p><b>label-based slicing (1)</b></p><pre class="codeinput"><span class="comment">% slide 189</span>
+<span class="comment">% Oops! NO SOLUTION</span>
+</pre><p><b>label-based slicing (2): row with label <tt>2</tt></b></p><pre class="codeinput"><span class="comment">% slide 191 (1)</span>
+data{<span class="string">'2'</span>,:}
+</pre><pre class="codeinput"><span class="comment">% slide 191 (2)</span>
+data(<span class="string">'2'</span>,:)
+</pre><p><b>label-based slicing (3): column with label <tt>a</tt></b></p><pre class="codeinput"><span class="comment">% slide 193 (1)</span>
+data{:, <span class="string">'a'</span>}
+</pre><pre class="codeinput"><span class="comment">% slide 193 (2)</span>
+data(:, <span class="string">'a'</span>)
+</pre><p><b>label-based fancy indexing</b></p><pre class="codeinput"><span class="comment">% slide 195 (1)</span>
+data{{<span class="string">'2'</span>,<span class="string">'3'</span>},{<span class="string">'b'</span>,<span class="string">'x1'</span>}}
+</pre><pre class="codeinput"><span class="comment">% slide 195 (2)</span>
+data({<span class="string">'2'</span>,<span class="string">'3'</span>},{<span class="string">'b'</span>,<span class="string">'x1'</span>})
+</pre><h2 id="31">HT004: Add a column to <tt>data</tt></h2><p><b>add a column (1): a number</b></p><p><b>Error: <tt>data.f1=1</tt></b></p><p>To assign to or create a variable in a table, the number of rows must match the height of the table.</p><pre class="codeinput"><span class="comment">% slide 202 (1)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data.f1=1 %Wrong</span>
+</pre><p><b><tt>data.f1(:)=1</tt></b></p><p>No error. But it is not what we want.</p><pre class="codeinput"><span class="comment">% slide 202 (2)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data.f1(:)=1
+</pre><p><b><tt>data1.f(:,1)=1</tt></b></p><pre class="codeinput"><span class="comment">% slide 202 (3)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data.f1(:,1)=1
+</pre><p><b><tt>data{:,'f1'}=1</tt></b></p><pre class="codeinput"><span class="comment">% slide 202 (4)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data{:,<span class="string">'f1'</span>}=1
+</pre><p><b>Error: <tt>data(:,'f1')=1</tt></b></p><p>Right hand side of an assignment into a table must be another table or a cell array.</p><pre class="codeinput"><span class="comment">% slide 202 (5)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data(:,'f1')=1 %Wrong</span>
+</pre><p><b><tt>data(:,'f1')={1}</tt></b></p><pre class="codeinput"><span class="comment">% slide 202 (6)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data(:,<span class="string">'f1'</span>)={1}
+</pre><p><b>Add a column (2): an array</b></p><p><b>Error: <tt>data.f1=[1,2,3,4]</tt></b></p><p>To assign to or create a variable in a table, the number of rows must match the height of the table.</p><pre class="codeinput"><span class="comment">% slide 203 (1)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data.f1=[1,2,3,4]</span>
+</pre><p><b><tt>data.f1=[1;2;3;4]</tt></b></p><pre class="codeinput"><span class="comment">% slide 203 (2)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+data.f1=[1;2;3;4]
+</pre><p><b><tt>data.f1={1;2;3;4}</tt></b></p><p>No error. But it is not what we want.</p><pre class="codeinput"><span class="comment">% slide 203 (3)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+data.f1={1;2;3;4}
+</pre><p><b>Error: <tt>data.f1(:)=[1;2;3;4]</tt></b></p><p>In an assignment  A(:) = B, the number of elements in A and B must be the same.</p><pre class="codeinput"><span class="comment">% slide 203 (4)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data1.f1(:)=[1;2;3;4] #Wrong</span>
+</pre><p><b>Error: <tt>data.f1(:)={1;2;3;4}</tt></b></p><p>In an assignment  A(:) = B, the number of elements in A and B must be the same.</p><pre class="codeinput"><span class="comment">% slide 203 (5)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data.f1(:)={1;2;3;4} #Wrong</span>
+</pre><p><b>Error: <tt>data.f1(:)=1:4</tt></b></p><p>In an assignment  A(:) = B, the number of elements in A and B must be the same.</p><pre class="codeinput"><span class="comment">% slide 203 (6)</span>
+<span class="comment">%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);</span>
+<span class="comment">%data.f1(:)=1:4 #Wrong</span>
+</pre><p><b><tt>data.f1(:,1)=[1;2;3;4]</tt></b></p><pre class="codeinput"><span class="comment">% slide 203 (7)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data.f1(:,1)=[1;2;3;4]
+</pre><p><b><tt>data.f1(:,1)=1:4</tt></b></p><pre class="codeinput"><span class="comment">% slide 203 (8)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data.f1(:,1)=1:4
+</pre><p><b><tt>data{:,'f1'}=[1;2;3;4]</tt></b></p><pre class="codeinput"><span class="comment">% slide 203 (9)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data{:,<span class="string">'f1'</span>}=[1;2;3;4]
+</pre><p><b><tt>data{:,'f1'}=1:4</tt></b></p><p>No error. But it is not what we want.</p><pre class="codeinput"><span class="comment">% slide 203 (10)</span>
+data=readtable(<span class="string">'HT001b.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+data{:,<span class="string">'f1'</span>}=1:4
+</pre><p><b>Homework: Use one command to add a column to <tt>data</tt>, using the first row of data, and name this column <tt>f</tt>.</b></p><pre class="codeinput"><span class="comment">% slide 204</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true);
+</pre><h2 id="51">HT005: Add a row to <tt>data</tt></h2><p><b><tt>data{'4',:}=[1,2,3,4]</tt></b></p><pre class="codeinput"><span class="comment">% slide 215</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">%data{'4',:}=1</span>
+<span class="comment">%data('4',:)={1}</span>
+<span class="comment">%data{'4',:}=[1,2,3,4]</span>
+data{<span class="string">'4'</span>,:}=1:4
+</pre><p><b>Error: <tt>data{'4',:}=[1;2;3;4]</tt></b></p><p>The value being assigned from should have 4 columns.</p><pre class="codeinput"><span class="comment">%data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)</span>
+<span class="comment">%data{'4',:}=[1;2;3;4] %Wrong</span>
+</pre><h2 id="54">HT006: Delete a row from <tt>data</tt></h2><p><b>Delete a column using the dot syntax</b></p><pre class="codeinput"><span class="comment">% slide 221 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">% delete column b</span>
+data.b=[]
+</pre><p><b>Delete a column using label-based indexing</b></p><pre class="codeinput"><span class="comment">% slide 221 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">% delete column b</span>
+data(:,<span class="string">'b'</span>)=[]
+</pre><p><b>Delete a column using position-based indexing</b></p><pre class="codeinput"><span class="comment">% slide 221 (3)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">% delete the first column</span>
+data(:,1)=[]
+</pre><p><b>Delete a row by the row number</b></p><pre class="codeinput"><span class="comment">% slide 222 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">% delete the first row</span>
+data(1,:)=[]
+</pre><p><b>Delete a row by the row name</b></p><pre class="codeinput"><span class="comment">% slide 222 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+<span class="comment">% delete row '0'</span>
+data(<span class="string">'0'</span>,:)=[]
+</pre><h2 id="60">How to swap two values in variables <tt>a</tt> and <tt>b</tt>?</h2><pre class="codeinput"><span class="comment">%slide 226 (1)</span>
+a=1;
+b=2;
+temp=a;
+a=b;
+b=temp;
+a
+b
+</pre><pre class="codeinput"><span class="comment">%slide 226 (2)</span>
+a=1;
+b=2;
+a, b=a, a  <span class="comment">%No error.</span>
+</pre><pre class="codeinput"><span class="comment">%slide 226 (3)</span>
+a=1;
+b=2;
+[a, b]=deal(b,a)
+</pre><h2 id="64">HT007: Swap two rows/columns in <tt>data</tt></h2><p><b>Swap two columns, label-based (1)</b></p><pre class="codeinput"><span class="comment">% slide 246 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data(:,{<span class="string">'b'</span>,<span class="string">'c'</span>})=data(:,{<span class="string">'c'</span>,<span class="string">'b'</span>})
+</pre><p><b>Swap two columns, label-based (2)</b></p><pre class="codeinput"><span class="comment">% slide 246 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{:,{<span class="string">'b'</span>,<span class="string">'c'</span>}}=data{:,{<span class="string">'c'</span>,<span class="string">'b'</span>}}
+</pre><p><b>Swap two rows, label-based (1)</b></p><pre class="codeinput"><span class="comment">% slide 248 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data({<span class="string">'0'</span>,<span class="string">'1'</span>},:)=data({<span class="string">'1'</span>,<span class="string">'0'</span>},:)
+</pre><p><b>Swap two rows, label-based (2)</b></p><pre class="codeinput"><span class="comment">% slide 248 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{{<span class="string">'0'</span>,<span class="string">'1'</span>},:}=data{{<span class="string">'1'</span>,<span class="string">'0'</span>},:}
+</pre><p><b>Swap two columns, position-based (1)</b></p><pre class="codeinput"><span class="comment">% slide 249 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data(:,[1,2])=data(:,[2,1])
+</pre><p><b>Swap two columns, position-based (2)</b></p><pre class="codeinput"><span class="comment">% slide 249 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{:,[1,2]}=data{:,[2,1]}
+</pre><p><b>Swap two rows, position-based (1)</b></p><pre class="codeinput"><span class="comment">% slide 249 (3)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data([1,2],:)=data([2,1],:)
+</pre><p><b>Swap two rows, position-based (2)</b></p><pre class="codeinput"><span class="comment">% slide 249 (4)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{[1,2],:}=data{[2,1],:}
+</pre><p><b>Use temp</b></p><pre class="codeinput"><span class="comment">% slide 250 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+temp=data(1,:);
+data(1,:)=data(2,:);
+data(2,:)=temp
+</pre><p><b>Use deal</b></p><pre class="codeinput"><span class="comment">% slide 250 (2)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+[data(1,:),data(2,:)]=deal(data(2,:), data(1,:))
+</pre><h2 id="74">HT008: Apply a function to each row/column of <tt>data</tt></h2><p><b><tt>rowfun</tt> (1)</b></p><pre class="codeinput"><span class="comment">% slide 262</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data)
+data(:,<span class="string">'row_sum'</span>)=rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data)
+</pre><p><b><tt>rowfun</tt> (2)</b></p><pre class="codeinput"><span class="comment">% slide 263</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data, <span class="string">'OutputFormat'</span>, <span class="string">'uniform'</span>)
+data{:,<span class="string">'row_sum'</span>}=rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data, <span class="keyword">...</span>
+                         <span class="string">'OutputFormat'</span>, <span class="string">'uniform'</span>)
+</pre><p><b><tt>varfun</tt> (1)</b></p><pre class="codeinput"><span class="comment">% slide 264</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+varfun(@(x) sum(x), data)
+data(<span class="string">'column_mean'</span>,:)=varfun(@(x) sum(x), data)
+</pre><p><b><tt>varfun</tt> (2)</b></p><pre class="codeinput"><span class="comment">% slide 265</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+varfun(@(x) sum(x), data, <span class="string">'OutputFormat'</span>, <span class="string">'uniform'</span>)
+data{<span class="string">'column_mean'</span>,:}=varfun(@(x) sum(x), data, <span class="string">'OutputFormat'</span>, <span class="string">'uniform'</span>)
+</pre><h2 id="78">HT009: Basic operations on two rows/columns of <tt>data</tt></h2><p><b>Update <tt>data</tt> by adding the first row to every row in <tt>data</tt></b></p><pre class="codeinput"><span class="comment">% slide 284</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{:,:}=data{:,:}+repmat(data{1,:},size(data,1),1)
+</pre><p><b>Add the first row and the last column (without finding the size of <tt>data</tt>) element wise and store the result in a column array.</b></p><pre class="codeinput"><span class="comment">% slide 285</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+transpose(data{1,:})+data{:,end}
+</pre><p><b>Add elements in the first column from the second row to the last row (without finding the size of <tt>data</tt>) and elements in the second column from the first row to the second to the last row (without finding the size of <tt>data</tt>) element wise and store the result in a row array.</b></p><pre class="codeinput"><span class="comment">% slide 286</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+transpose(data{2:end,1}+data{1:end-1,2})
+</pre><p>*Use one command to compute the matrix multiplication, using the first 3 rows in <tt>data</tt> as the first matrix, and using the last row (without finding the size of <tt>data</tt>) as the second 1-column matrix.</p><pre class="codeinput"><span class="comment">% slide 288</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+data{1:3, :}*transpose(data{end,:})
+</pre><h2 id="83">HT010: Sort <tt>data</tt></h2><p><b><tt>sort</tt> a matrix</b></p><pre class="codeinput"><span class="comment">% slide 295 (1)</span>
+x=[1 2 3;3 1 2;2 1 3]
+</pre><p><b><tt>[y,I]=sort(x,1,'ascend')</tt></b></p><pre class="codeinput"><span class="comment">% slide 295 (2)</span>
+[y,I]=sort(x,1,<span class="string">'ascend'</span>)
+</pre><p><b><tt>x(I(:,2),:)</tt> sort rows of <tt>x</tt> using the second column</b></p><pre class="codeinput"><span class="comment">% slide 295 (3)</span>
+x(I(:,2),:)
+</pre><p><b><tt>[y,I]=sort(x,2,'ascend')</tt></b></p><pre class="codeinput"><span class="comment">% slide 295 (4)</span>
+[y,I]=sort(x,2,<span class="string">'ascend'</span>)
+</pre><p><b><tt>x(:,I(:,2))</tt> sort columns of|x| using the second row</b></p><pre class="codeinput"><span class="comment">% slide 295 (5)</span>
+x(:,I(2,:))
+</pre><p><b><tt>sort</tt> <tt>data</tt></b></p><pre class="codeinput"><span class="comment">% slide 296 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+</pre><pre class="codeinput"><span class="comment">% slide 296 (2)</span>
+[y,I]=sort(data{:,:},1,<span class="string">'ascend'</span>)
+</pre><p><b><tt>sort</tt> rows of <tt>data</tt> using the 3rd column</b></p><pre class="codeinput"><span class="comment">% slide 296 (3)</span>
+data(I(:,3),:)
+</pre><pre class="codeinput"><span class="comment">% slide 296 (4)</span>
+[y,I]=sort(data{:,:},2,<span class="string">'ascend'</span>)
+</pre><p><b><tt>sort</tt> columns of <tt>data</tt> using the 3rd row</b></p><pre class="codeinput"><span class="comment">% slide 296 (5)</span>
+data(:,I(3,:))
+</pre><pre class="codeinput"><span class="comment">% slide 298 (1)</span>
+x=[1 3 2;2 1 3;1 2 3]
+</pre><p><b><tt>sortrows(x)</tt></b></p><pre class="codeinput"><span class="comment">% slide 298 (2)</span>
+sortrows(x)
+</pre><p><b><tt>sortrows(x,[1,-2])</tt></b></p><pre class="codeinput"><span class="comment">% slide 298 (3)</span>
+sortrows(x,[1,-2])
+</pre><p><b>Use <tt>sortrows(x,2)</tt> to sort <tt>x</tt> using the second column</b></p><pre class="codeinput"><span class="comment">% slide 298 (4)</span>
+sortrows(x,2)
+</pre><p><b>Use <tt>sortrows</tt> to sort <tt>x</tt> using the second row</b></p><pre class="codeinput"><span class="comment">% slide 299</span>
+x=[1 3 2;2 1 3;1 2 3]
+transpose(sortrows(transpose(x),2))
+</pre><p><b>Use <tt>sortrows</tt> to sort <tt>data</tt> using the 3nd column</b></p><pre class="codeinput"><span class="comment">% slide 300 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+</pre><pre class="codeinput"><span class="comment">% slide 300 (2)</span>
+sortrows(data,3)
+</pre><pre class="codeinput"><span class="comment">% slide 300 (3)</span>
+data
+</pre><pre class="codeinput"><span class="comment">% slide 300 (4)</span>
+data=sortrows(data,3)
+</pre><p><b>Use <tt>sortrows</tt> to sort <tt>data</tt> using the 3nd row</b></p><pre class="codeinput"><span class="comment">% slide 301 (1)</span>
+data=readtable(<span class="string">'HT001a.csv'</span>,<span class="string">'ReadRowNames'</span>,true,<span class="string">'ReadVariableNames'</span>,true)
+</pre><pre class="codeinput"><span class="comment">% slide 301 (2)</span>
+[y,I]=sortrows(transpose(data{:,:}),3);
+data(:,I)
+</pre><p><b>Indexing on Assignment</b></p><pre class="codeinput"><span class="comment">% slide 302 (1)</span>
+x=[1 2 3;4 5 6;7 8 9]
+</pre><pre class="codeinput"><span class="comment">% slide 302 (2)</span>
+x(2,:)=x(:,3)
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+clear;
+clc;
+%% *How to ...*
+
+%% HT001: Use one command to import data from a CSV file, |HT001a.csv| , using the first row as column labels, and the first column as row labels. Name the data imported as |data|.
+
+% slide 169
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+
+%% 
+%
+% *What if the file is |newfolder\newfile.csv| ?*
+%
+
+% slide 171 (Windows)
+data=readtable('newfolder\newfile.csv')
+
+% slide 171 (Mac)
+% data=readtable('newfolder\newfile.csv')
+
+%% 
+%
+% *What if the labels are as in |HT001b.csv| ?*
+%
+
+% slide 173
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true)
+
+%% 
+%
+% *column labels*
+%
+
+% slide 174 (1)
+data.Properties.VariableNames
+
+%% 
+%
+% *row labels*
+%
+
+% slide 174 (2)
+data.Properties.RowNames
+
+%% HT002: Use an appropriate position-based indexing/slicing method to select data in data.
+%% 
+%
+% *position-based indexing*
+%
+
+% slide 176 (1)
+data{1,1}
+
+%%
+%
+
+% slide 176 (2)
+data(1,1)
+
+%% 
+%
+% *position-based slicing (1)*
+% 
+
+% slide 178 (1)
+data{1:2, 1:2}
+
+%%
+%
+
+% slide 178 (2)
+data(1:2, 1:2)
+
+%% 
+%
+% *position-based slicing (2): the 1st row*
+%
+
+% slide 180 (1)
+data{1, :}
+
+%%
+%
+
+% slide 180 (2)
+data(1, :)
+
+%% 
+%
+% *position-based slicing (3): the 1st column*
+%
+
+% slide 182 (1)
+data{:, 1}
+
+%%
+%
+
+% slide 182 (2)
+data(:, 1)
+
+%% 
+%
+% *|data{:,:}|*
+%
+
+% slide 184 (1)
+data{:,:}
+
+%%
+%
+% *|data(:,:)|*
+%
+
+% slide 184 (2)
+data(:,:)
+
+%% 
+%
+% *fancy indexing*
+%
+
+% slide 186 (1)
+data{[3 1],[1 2]}
+
+%%
+%
+
+% slide 186 (2)
+data([3 1],[1 2])
+
+%% HT003: Use an appropriate label-based indexing/slicing method to select data in |data|.
+
+%% 
+%
+% *label-based indexing*
+%
+
+% slide 188 (1)
+data{'2','b'}
+
+%%
+%
+
+% slide 188 (2)
+data('2','b')
+
+%% 
+%
+% *label-based slicing (1)*
+%
+
+% slide 189
+% Oops! NO SOLUTION
+
+%% 
+%
+% *label-based slicing (2): row with label |2|*
+%
+
+% slide 191 (1)
+data{'2',:}
+
+%%
+%
+
+% slide 191 (2)
+data('2',:)
+
+%%
+%
+% *label-based slicing (3): column with label |a|*
+%
+
+% slide 193 (1)
+data{:, 'a'}
+
+%%
+%
+
+% slide 193 (2)
+data(:, 'a')
+
+%% 
+%
+% *label-based fancy indexing*
+%
+
+% slide 195 (1)
+data{{'2','3'},{'b','x1'}}
+
+%%
+%
+
+% slide 195 (2)
+data({'2','3'},{'b','x1'})
+
+%% HT004: Add a column to |data|
+
+%% 
+%
+% *add a column (1): a number*
+%
+
+%%
+% *Error: |data.f1=1|*
+%
+% To assign to or create a variable in a table, 
+% the number of rows must match the height of the table.
+
+% slide 202 (1)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data.f1=1 %Wrong
+
+%%
+%
+% *|data.f1(:)=1|*
+%
+% No error. But it is not what we want.
+%
+
+% slide 202 (2)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1(:)=1
+
+%%
+%
+% *|data1.f(:,1)=1|*
+%
+
+% slide 202 (3)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1(:,1)=1
+
+%%
+%
+% *|data{:,'f1'}=1|*
+%
+
+% slide 202 (4)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data{:,'f1'}=1
+
+%%
+%
+% *Error: |data(:,'f1')=1|*
+% 
+% Right hand side of an assignment into a table must be another 
+% table or a cell array.
+%
+
+% slide 202 (5)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data(:,'f1')=1 %Wrong
+
+%%
+%
+% *|data(:,'f1')={1}|*
+%
+
+% slide 202 (6)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data(:,'f1')={1}
+
+%% 
+%
+% *Add a column (2): an array*
+%
+
+%%
+%
+% *Error: |data.f1=[1,2,3,4]|*
+%
+% To assign to or create a variable in a table, 
+% the number of rows must match the height of the table.
+%
+
+% slide 203 (1)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data.f1=[1,2,3,4]
+
+%%
+%
+% *|data.f1=[1;2;3;4]|*
+%
+
+% slide 203 (2)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1=[1;2;3;4]
+
+%%
+%
+% *|data.f1={1;2;3;4}|*
+%
+% No error. But it is not what we want.
+%
+
+% slide 203 (3)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1={1;2;3;4}
+
+%%
+%
+% *Error: |data.f1(:)=[1;2;3;4]|*
+%
+% In an assignment  A(:) = B, the number of elements in A and B 
+% must be the same.
+%
+
+% slide 203 (4)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data1.f1(:)=[1;2;3;4] #Wrong
+
+%%
+%
+% *Error: |data.f1(:)={1;2;3;4}|*
+%
+% In an assignment  A(:) = B, the number of elements in A and B 
+% must be the same.
+%
+
+% slide 203 (5)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data.f1(:)={1;2;3;4} #Wrong
+
+%%
+%
+% *Error: |data.f1(:)=1:4|*
+%
+% In an assignment  A(:) = B, the number of elements in A and B 
+% must be the same.
+%
+
+% slide 203 (6)
+%data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+%data.f1(:)=1:4 #Wrong
+
+%%
+%
+% *|data.f1(:,1)=[1;2;3;4]|*
+%
+
+% slide 203 (7)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1(:,1)=[1;2;3;4]
+
+%%
+%
+% *|data.f1(:,1)=1:4|*
+%
+
+% slide 203 (8)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data.f1(:,1)=1:4
+
+%%
+%
+% *|data{:,'f1'}=[1;2;3;4]|*
+%
+
+% slide 203 (9)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data{:,'f1'}=[1;2;3;4]
+
+%%
+%
+% *|data{:,'f1'}=1:4|*
+%
+% No error. But it is not what we want.
+%
+
+% slide 203 (10)
+data=readtable('HT001b.csv','ReadRowNames',true,'ReadVariableNames',true);
+data{:,'f1'}=1:4
+
+%%
+%
+% *Homework: Use one command to add a column to |data|, 
+% using the first row of data, and name this column |f|.*
+%
+
+% slide 204
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true);
+
+
+%% HT005: Add a row to |data|
+
+%%
+%
+% *|data{'4',:}=[1,2,3,4]|*
+%
+
+% slide 215
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+%data{'4',:}=1
+%data('4',:)={1}
+%data{'4',:}=[1,2,3,4]
+data{'4',:}=1:4
+
+%%
+%
+% *Error: |data{'4',:}=[1;2;3;4]|*
+%
+% The value being assigned from should have 4 columns. 
+%
+
+%data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+%data{'4',:}=[1;2;3;4] %Wrong
+
+%% HT006: Delete a row from |data|
+
+%%
+%
+% *Delete a column using the dot syntax*
+%
+
+% slide 221 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+% delete column b
+data.b=[]
+
+%%
+%
+% *Delete a column using label-based indexing*
+%
+
+% slide 221 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+% delete column b
+data(:,'b')=[]
+
+%%
+%
+% *Delete a column using position-based indexing*
+%
+
+% slide 221 (3)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+% delete the first column
+data(:,1)=[]
+
+%%
+%
+% *Delete a row by the row number*
+%
+
+% slide 222 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+% delete the first row
+data(1,:)=[]
+
+%%
+%
+% *Delete a row by the row name*
+%
+
+% slide 222 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+% delete row '0'
+data('0',:)=[]
+
+%% How to swap two values in variables |a| and |b|?
+
+
+%% 
+% 
+
+%slide 226 (1)
+a=1;
+b=2;
+temp=a;
+a=b;
+b=temp;
+a
+b
+
+%%
+% 
+
+%slide 226 (2)
+a=1;
+b=2;
+a, b=a, a  %No error.
+
+%%
+% 
+
+%slide 226 (3)
+a=1;
+b=2;
+[a, b]=deal(b,a)
+
+%% HT007: Swap two rows/columns in |data|
+%
+% *Swap two columns, label-based (1)*
+
+% slide 246 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data(:,{'b','c'})=data(:,{'c','b'})
+
+
+%%
+%
+% *Swap two columns, label-based (2)*
+
+% slide 246 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{:,{'b','c'}}=data{:,{'c','b'}}
+
+%%
+%
+% *Swap two rows, label-based (1)*
+
+% slide 248 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data({'0','1'},:)=data({'1','0'},:)
+
+%%
+%
+% *Swap two rows, label-based (2)*
+
+% slide 248 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{{'0','1'},:}=data{{'1','0'},:}
+
+%%
+%
+% *Swap two columns, position-based (1)*
+
+% slide 249 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data(:,[1,2])=data(:,[2,1])
+
+%%
+%
+% *Swap two columns, position-based (2)*
+
+% slide 249 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{:,[1,2]}=data{:,[2,1]}
+
+%%
+%
+% *Swap two rows, position-based (1)*
+
+% slide 249 (3)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data([1,2],:)=data([2,1],:)
+
+%%
+%
+% *Swap two rows, position-based (2)*
+
+% slide 249 (4)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{[1,2],:}=data{[2,1],:}
+
+%%
+%
+% *Use temp*
+%
+
+% slide 250 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+temp=data(1,:);
+data(1,:)=data(2,:);
+data(2,:)=temp
+
+%%
+%
+% *Use deal*
+%
+
+% slide 250 (2)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+[data(1,:),data(2,:)]=deal(data(2,:), data(1,:))
+
+
+%% HT008: Apply a function to each row/column of |data|
+%
+% *|rowfun| (1)*
+%
+
+% slide 262
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data)
+data(:,'row_sum')=rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data)
+
+%%
+%
+% *|rowfun| (2)*
+%
+
+% slide 263
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data, 'OutputFormat', 'uniform')
+data{:,'row_sum'}=rowfun(@(x1,x2,x3,x4) x1+x2+x3+x4, data, ...
+                         'OutputFormat', 'uniform')
+
+%%
+%
+% *|varfun| (1)*
+%
+
+% slide 264
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+varfun(@(x) sum(x), data)
+data('column_mean',:)=varfun(@(x) sum(x), data)
+
+
+%%
+%
+% *|varfun| (2)*
+%
+
+% slide 265
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+varfun(@(x) sum(x), data, 'OutputFormat', 'uniform')
+data{'column_mean',:}=varfun(@(x) sum(x), data, 'OutputFormat', 'uniform')
+
+%% HT009: Basic operations on two rows/columns of |data|
+%
+
+%%
+%
+% *Update |data| by adding the first row to every row in |data|*
+%
+
+% slide 284
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{:,:}=data{:,:}+repmat(data{1,:},size(data,1),1)
+
+%%
+%
+% *Add the first row and the last column (without finding the size of
+% |data|) element wise and store the result in a column array.*
+%
+
+% slide 285
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+transpose(data{1,:})+data{:,end}
+
+%%
+%
+% *Add elements in the first column from the second row to the last row 
+% (without finding the size of |data|) and elements in the second column 
+% from the first row to the second to the last row (without finding the 
+% size of |data|) element wise and store the result in a row array.*
+%
+
+% slide 286
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+transpose(data{2:end,1}+data{1:end-1,2})
+
+%%
+%
+% *Use one command to compute the matrix multiplication, 
+% using the first 3 rows in |data| as the first matrix, 
+% and using the last row (without finding the size of |data|) 
+% as the second 1-column matrix.
+%
+
+% slide 288
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+data{1:3, :}*transpose(data{end,:})
+
+%% HT010: Sort |data|
+%
+
+%%
+%
+% *|sort| a matrix*
+%
+
+% slide 295 (1)
+x=[1 2 3;3 1 2;2 1 3]
+
+%%
+%
+% *|[y,I]=sort(x,1,'ascend')|*
+%
+
+% slide 295 (2)
+[y,I]=sort(x,1,'ascend')
+
+%%
+%
+% *|x(I(:,2),:)| sort rows of |x| using the second column*
+%
+
+% slide 295 (3)
+x(I(:,2),:)
+
+%%
+%
+% *|[y,I]=sort(x,2,'ascend')|*
+%
+
+% slide 295 (4)
+[y,I]=sort(x,2,'ascend')
+
+%%
+%
+% *|x(:,I(:,2))| sort columns of|x| using the second row*
+%
+
+% slide 295 (5)
+x(:,I(2,:))
+
+%%
+%
+% *|sort| |data|*
+%
+
+% slide 296 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+
+%%
+%
+
+% slide 296 (2)
+[y,I]=sort(data{:,:},1,'ascend')
+
+%%
+%
+% *|sort| rows of |data| using the 3rd column*
+%
+
+% slide 296 (3)
+data(I(:,3),:)
+
+
+%%
+%
+
+% slide 296 (4)
+[y,I]=sort(data{:,:},2,'ascend')
+
+%%
+%
+% *|sort| columns of |data| using the 3rd row*
+%
+
+% slide 296 (5)
+data(:,I(3,:))
+
+%%
+% 
+
+% slide 298 (1)
+x=[1 3 2;2 1 3;1 2 3]
+
+%%
+%
+% *|sortrows(x)|*
+%
+
+% slide 298 (2)
+sortrows(x)
+
+%%
+%
+% *|sortrows(x,[1,-2])|*
+%
+
+% slide 298 (3)
+sortrows(x,[1,-2])
+
+
+%%
+%
+% *Use |sortrows(x,2)| to sort |x| using the second column*
+%
+
+% slide 298 (4)
+sortrows(x,2)
+
+%%
+%
+% *Use |sortrows| to sort |x| using the second row*
+%
+
+% slide 299 
+x=[1 3 2;2 1 3;1 2 3]
+transpose(sortrows(transpose(x),2))
+
+%%
+%
+% *Use |sortrows| to sort |data| using the 3nd column*
+%
+
+% slide 300 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+
+%%
+%
+
+% slide 300 (2)
+sortrows(data,3)
+
+%%
+%
+
+% slide 300 (3)
+data
+
+%%
+%
+
+% slide 300 (4)
+data=sortrows(data,3)
+
+
+%%
+%
+% *Use |sortrows| to sort |data| using the 3nd row*
+%
+
+% slide 301 (1)
+data=readtable('HT001a.csv','ReadRowNames',true,'ReadVariableNames',true)
+
+%%
+%
+
+% slide 301 (2)
+[y,I]=sortrows(transpose(data{:,:}),3);
+data(:,I)
+
+%% 
+%
+% *Indexing on Assignment*
+%
+
+% slide 302 (1)
+x=[1 2 3;4 5 6;7 8 9]
+
+%%
+%
+
+% slide 302 (2)
+x(2,:)=x(:,3)
+##### SOURCE END #####
+--></body></html>

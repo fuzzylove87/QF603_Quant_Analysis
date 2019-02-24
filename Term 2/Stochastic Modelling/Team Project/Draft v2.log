@@ -1,0 +1,29 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.28)  25 NOV 2018 13:12
+entering extended mode
+**"./Draft v2.tex"
+("Draft v2.tex"
+LaTeX2e <2018-04-01> patch level 5
+
+! LaTeX Error: File `SelfArx.cls' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: cls)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.2 \setlength
+              {\columnsep}{0.55cm} % Distance between the two columns of text
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 12 strings out of 492973
+ 291 string characters out of 3126692
+ 56085 words of memory out of 3000000
+ 3981 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 10i,0n,8p,109b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

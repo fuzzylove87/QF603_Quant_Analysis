@@ -1,0 +1,1106 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Multi-Factor Models 3.0}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Xicheng XIA
+
+    \hypertarget{part-1-performance-measurement}{%
+\section{Part 1: Performance
+Measurement}\label{part-1-performance-measurement}}
+
+    \hypertarget{import-data}{%
+\subsection{import data}\label{import-data}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{statsmodels}\PY{n+nn}{.}\PY{n+nn}{api} \PY{k}{as} \PY{n+nn}{sm}
+        \PY{k+kn}{import} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{optimize} \PY{k}{as} \PY{n+nn}{optimize}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{rcParams}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{font.family}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{serif}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{rcParams}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{figure.facecolor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{1.}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{IndPtf} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Industry\PYZus{}Portfolios.xlsx}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{IndPtf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{to\PYZus{}datetime}\PY{p}{(}\PY{n}{IndPtf}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n+nb}{format} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{Y}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{m}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{IndPtf} \PY{o}{=} \PY{n}{IndPtf}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        
+        \PY{n}{RiskFactor} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}excel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Risk\PYZus{}factors.xlsx}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{RiskFactor}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{to\PYZus{}datetime}\PY{p}{(}\PY{n}{RiskFactor}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n+nb}{format} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{Y}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{m}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{RiskFactor} \PY{o}{=} \PY{n}{RiskFactor}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Date}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{RiskFactor}\PY{o}{.}\PY{n}{shape}\PY{p}{)}
+        \PY{n}{RiskFactor}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(120, 4)
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}3}]:}               Rf  Rm-Rf   SMB   HML
+        Date                               
+        2004-01-01  0.07   2.15  2.67  1.55
+        2004-02-01  0.06   1.40 -1.17  0.45
+        2004-03-01  0.09  -1.32  1.84  0.07
+        2004-04-01  0.08  -1.83 -2.59 -1.67
+        2004-05-01  0.06   1.17 -0.10 -0.33
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{shape}\PY{p}{)}
+        \PY{n}{IndPtf}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(120, 10)
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}4}]:}             NoDur  Durbl  Manuf  Enrgy  HiTec  Telcm  Shops  Hlth  Utils  \textbackslash{}
+        Date                                                                       
+        2004-01-01   0.06  -1.07  -0.62   0.44   4.53   1.41   0.45  3.09   1.92   
+        2004-02-01   4.25  -0.07   1.95   4.69  -2.92  -0.52   6.09  0.89   2.07   
+        2004-03-01  -0.09  -1.15  -0.27  -0.13  -2.55  -2.07   0.29 -3.96   1.13   
+        2004-04-01   1.42   2.30  -0.17   2.52  -4.91  -0.48  -2.70  3.54  -3.55   
+        2004-05-01  -1.89  -1.64   1.61   0.39   4.85  -2.95   0.30 -0.42   1.28   
+        
+                    Other  
+        Date               
+        2004-01-01   2.88  
+        2004-02-01   2.16  
+        2004-03-01  -0.63  
+        2004-04-01  -3.76  
+        2004-05-01   1.86  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{ExcRet} \PY{o}{=} \PY{n}{IndPtf}\PY{o}{.}\PY{n}{sub}\PY{p}{(}\PY{n}{RiskFactor}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Rf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{axis} \PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}
+        
+        \PY{n}{ExcRet}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}5}]:}             NoDur  Durbl  Manuf  Enrgy  HiTec  Telcm  Shops  Hlth  Utils  \textbackslash{}
+        Date                                                                       
+        2004-01-01  -0.01  -1.14  -0.69   0.37   4.46   1.34   0.38  3.02   1.85   
+        2004-02-01   4.19  -0.13   1.89   4.63  -2.98  -0.58   6.03  0.83   2.01   
+        2004-03-01  -0.18  -1.24  -0.36  -0.22  -2.64  -2.16   0.20 -4.05   1.04   
+        2004-04-01   1.34   2.22  -0.25   2.44  -4.99  -0.56  -2.78  3.46  -3.63   
+        2004-05-01  -1.95  -1.70   1.55   0.33   4.79  -3.01   0.24 -0.48   1.22   
+        
+                    Other  
+        Date               
+        2004-01-01   2.81  
+        2004-02-01   2.10  
+        2004-03-01  -0.72  
+        2004-04-01  -3.84  
+        2004-05-01   1.80  
+\end{Verbatim}
+            
+    \hypertarget{sharpe-ratio}{%
+\subsection{Sharpe Ratio}\label{sharpe-ratio}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{Data} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{)}
+        \PY{n}{Data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Sharpe Ratio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{ExcRet}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{p}{(} \PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{p}{)}\PY{o}{/}\PY{p}{(} \PY{n}{x}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)} \PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \hypertarget{sortino-ratio}{%
+\subsection{Sortino Ratio}\label{sortino-ratio}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{SV}\PY{o}{=} \PY{n}{ExcRet}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{np}\PY{o}{.}\PY{n}{square}\PY{p}{(} \PY{n}{x}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{y}\PY{p}{:} \PY{n+nb}{min}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{)} \PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{p}{)}
+        \PY{n}{Data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Sortino Ratio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{ExcRet}\PY{o}{.}\PY{n}{apply}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{p}{)} \PY{o}{/} \PY{n}{np}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{SV}\PY{p}{)}
+\end{Verbatim}
+
+
+    \hypertarget{jensens-alpha}{%
+\subsection{Jensen's Alpha}\label{jensens-alpha}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{k}{def} \PY{n+nf}{calculate\PYZus{}CAPM}\PY{p}{(}\PY{n}{Rm\PYZus{}Rf}\PY{p}{,} \PY{n}{Ri\PYZus{}Rf}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{} calculate Alpha and Beta for CAPM}
+        \PY{l+s+sd}{    input:}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} Rm\PYZus{}Rf: series of market portfolio excess return}
+        \PY{l+s+sd}{                pandas.core.series.Series type}
+        \PY{l+s+sd}{                }
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} Ri\PYZus{}Rf: series of i\PYZus{}th portfolio excess return}
+        \PY{l+s+sd}{                 pandas.core.series.Series type}
+        \PY{l+s+sd}{             }
+        \PY{l+s+sd}{    output:}
+        \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} result.params: OLS parameters}
+        \PY{l+s+sd}{                                pandas.core.series.Series type}
+        \PY{l+s+sd}{    }
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{n}{X} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{Rm\PYZus{}Rf}\PY{p}{)}
+            \PY{n}{y} \PY{o}{=} \PY{n}{Ri\PYZus{}Rf}
+            \PY{n}{results} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{X}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
+        
+            \PY{k}{return} \PY{n}{results}\PY{o}{.}\PY{n}{params}
+        
+        \PY{n}{CAPM} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{calculate\PYZus{}CAPM}\PY{p}{(}\PY{n}{RiskFactor}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Rm\PYZhy{}Rf}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,} \PY{n}{ExcRet}\PY{p}{[}\PY{n}{name}\PY{p}{]}\PY{p}{)}
+                          \PY{k}{for} \PY{n}{name} \PY{o+ow}{in} \PY{n}{ExcRet}\PY{o}{.}\PY{n}{columns}\PY{p}{]}\PY{p}{,} \PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}
+        
+        \PY{n}{CAPM}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}8}]:}               0         1         2         3         4         5         6  \textbackslash{}
+        const  0.369717 -0.417903  0.160494  0.504485 -0.064024  0.194348  0.274093   
+        Rm-Rf  0.653744  1.649374  1.167929  0.965527  1.132387  0.901721  0.829515   
+        
+                      7         8         9  
+        const  0.236968  0.446523 -0.387508  
+        Rm-Rf  0.675890  0.537009  1.206992  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{Data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Jensen}\PY{l+s+se}{\PYZbs{}\PYZsq{}}\PY{l+s+s1}{s Alpha}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{CAPM}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{const}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{values}
+\end{Verbatim}
+
+
+    \hypertarget{factor-alpha}{%
+\subsection{3-factor alpha}\label{factor-alpha}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{k}{def} \PY{n+nf}{calculate\PYZus{}3\PYZus{}FACTOR}\PY{p}{(}\PY{n}{Rx\PYZus{}Rf}\PY{p}{,} \PY{n}{Ri\PYZus{}Rf}\PY{p}{)}\PY{p}{:}
+             \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{} calculate Alpha and Beta for three\PYZhy{}factor model}
+         \PY{l+s+sd}{    input:}
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} Rx\PYZus{}Rf: series of explanatory factors}
+         \PY{l+s+sd}{                pandas.core.series.Series type}
+         \PY{l+s+sd}{                }
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} Ri\PYZus{}Rf: series of i\PYZus{}th portfolio excess return}
+         \PY{l+s+sd}{                 pandas.core.series.Series type}
+         \PY{l+s+sd}{             }
+         \PY{l+s+sd}{    output:}
+         \PY{l+s+sd}{    \PYZhy{}\PYZhy{}\PYZhy{} result.params: OLS parameters}
+         \PY{l+s+sd}{                                pandas.core.series.Series type}
+         \PY{l+s+sd}{    }
+         \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+             \PY{n}{X} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{add\PYZus{}constant}\PY{p}{(}\PY{n}{Rx\PYZus{}Rf}\PY{p}{)}
+             \PY{n}{y} \PY{o}{=} \PY{n}{Ri\PYZus{}Rf}
+             \PY{n}{results} \PY{o}{=} \PY{n}{sm}\PY{o}{.}\PY{n}{OLS}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n}{X}\PY{p}{)}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{p}{)}
+         
+             \PY{k}{return} \PY{n}{results}\PY{o}{.}\PY{n}{params}
+         
+         \PY{n}{THREE\PYZus{}FACTOR} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{calculate\PYZus{}3\PYZus{}FACTOR}\PY{p}{(}\PY{n}{RiskFactor}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{ExcRet}\PY{p}{[}\PY{n}{name}\PY{p}{]}\PY{p}{)} 
+                                   \PY{k}{for} \PY{n}{name} \PY{o+ow}{in} \PY{n}{ExcRet}\PY{o}{.}\PY{n}{columns}\PY{p}{]}\PY{p}{,} \PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{n}{THREE\PYZus{}FACTOR}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}10}]:}               0         1         2         3         4         5         6  \textbackslash{}
+         const  0.386704 -0.474342  0.153285  0.523007 -0.065979  0.200724  0.255941   
+         Rm-Rf  0.712134  1.447452  1.142282  1.028354  1.152803  0.924137  0.770227   
+         SMB   -0.229102  0.670878  0.087388 -0.259360  0.335674 -0.080299  0.280191   
+         HML   -0.023342  0.240949  0.027727 -0.008158 -0.556947 -0.019063 -0.039080   
+         
+                       7         8         9  
+         const  0.257472  0.474411 -0.404412  
+         Rm-Rf  0.751976  0.631827  1.123473  
+         SMB   -0.212655 -0.387961 -0.061676  
+         HML   -0.143765 -0.016881  0.547325  
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{Data}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Three\PYZhy{}Factor Alpha}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{THREE\PYZus{}FACTOR}\PY{o}{.}\PY{n}{loc}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{const}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{o}{.}\PY{n}{values}
+         
+         \PY{n}{Data}\PY{o}{.}\PY{n}{plot}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{Data}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{,} \PY{n}{rot}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{subplots}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_17_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{Data}\PY{o}{.}\PY{n}{T}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}12}]:}                        NoDur     Durbl     Manuf     Enrgy     HiTec  \textbackslash{}
+         Sharpe Ratio        0.231099  0.072356  0.166616  0.181708  0.118552   
+         Sortino Ratio       0.350804  0.111967  0.241260  0.273612  0.170620   
+         Jensen's Alpha      0.369717 -0.417903  0.160494  0.504485 -0.064024   
+         Three-Factor Alpha  0.386704 -0.474342  0.153285  0.523007 -0.065979   
+         
+                                Telcm     Shops      Hlth     Utils     Other  
+         Sharpe Ratio        0.169064  0.191753  0.172529  0.210948  0.064693  
+         Sortino Ratio       0.244940  0.293032  0.270294  0.290044  0.087351  
+         Jensen's Alpha      0.194348  0.274093  0.236968  0.446523 -0.387508  
+         Three-Factor Alpha  0.200724  0.255941  0.257472  0.474411 -0.404412  
+\end{Verbatim}
+            
+    Sharpe ratio measures the risk premium per unit of total risk;
+
+Sortino Ratio measures the risk premium per unit of downside risk;
+
+Jensen's Alpha measures the pricing error of CAPM;
+
+Three-factor Alpha measures the pricing error of three-factor model.
+
+    \hypertarget{part-2-minimum-variance-frontier-revisited}{%
+\section{Part 2: Minimum-Variance Frontier
+Revisited}\label{part-2-minimum-variance-frontier-revisited}}
+
+    \hypertarget{calculate-efficient-frontier-via-scipy.optimize.minimize}{%
+\subsection{Calculate efficient frontier via
+scipy.optimize.minimize}\label{calculate-efficient-frontier-via-scipy.optimize.minimize}}
+
+    Before we apply Monte Carlo method, we firstly use
+scipy.optimize.minimize to find out the frontier portfolio weight.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{c+c1}{\PYZsh{} because this is a long\PYZhy{}only portfolio, so possible return should be }
+         \PY{c+c1}{\PYZsh{} no less than the smallest single asset return and no more than}
+         \PY{c+c1}{\PYZsh{} largest single asset return.}
+         \PY{n}{mu\PYZus{}lst} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(} \PY{n}{IndPtf}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{n}{IndPtf}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{p}{)}\PY{p}{,} \PY{l+m+mf}{0.001}\PY{p}{)}
+         \PY{n}{w\PYZus{}lst} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{k}{for} \PY{n}{mu} \PY{o+ow}{in} \PY{n}{mu\PYZus{}lst}\PY{p}{:}
+             \PY{c+c1}{\PYZsh{} aiming function that we\PYZsq{}re going to minimize}
+             \PY{n}{f} \PY{o}{=} \PY{k}{lambda} \PY{n}{w}\PY{p}{:} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{T}\PY{p}{)}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)}
+             
+             \PY{c+c1}{\PYZsh{} boundary of weight}
+             \PY{n}{bnds} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{10}
+             
+             \PY{c+c1}{\PYZsh{} constaints of mean of return and sum of portfolio weight}
+             \PY{n}{cons} \PY{o}{=} \PY{p}{(}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{eq}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{fun}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{k}{lambda} \PY{n}{w}\PY{p}{:}  \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{T}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{mu}\PY{p}{\PYZcb{}}\PY{p}{,}
+                    \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{type}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{eq}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{fun}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{k}{lambda} \PY{n}{w}\PY{p}{:}  \PY{n+nb}{sum}\PY{p}{(}\PY{n}{w}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{\PYZcb{}}\PY{p}{)}
+             
+             \PY{c+c1}{\PYZsh{} initialization}
+             \PY{n}{w0} \PY{o}{=} \PY{p}{(}\PY{p}{[}\PY{l+m+mf}{0.1}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{10}\PY{p}{)}
+             
+             \PY{c+c1}{\PYZsh{} minimize standard deviation}
+             \PY{n}{w\PYZus{}lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{optimize}\PY{o}{.}\PY{n}{minimize}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{w0}\PY{p}{,} \PY{n}{method}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{SLSQP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+                                            \PY{n}{bounds}\PY{o}{=}\PY{n}{bnds}\PY{p}{,} \PY{n}{constraints}\PY{o}{=}\PY{n}{cons}\PY{p}{,}
+                                           \PY{n}{options}\PY{o}{=}\PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{maxiter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{10000000}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ftol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mf}{1e\PYZhy{}06}\PY{p}{\PYZcb{}}\PY{p}{)}\PY{o}{.}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{c+c1}{\PYZsh{} calculate the (annual) sigma for frontier portfolio}
+         \PY{n}{FrontierSigma} \PY{o}{=} \PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{T}\PY{p}{)}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{w} \PY{o+ow}{in} \PY{n}{w\PYZus{}lst}\PY{p}{]}
+         
+         \PY{c+c1}{\PYZsh{} calculate the (annual) mean of return for frontier portfolio}
+         \PY{n}{FrontierMeanReturn} \PY{o}{=} \PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w}\PY{o}{.}\PY{n}{T}\PY{p}{)}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{w} \PY{o+ow}{in} \PY{n}{w\PYZus{}lst}\PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{ind} \PY{o}{=} \PY{n}{FrontierSigma}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n+nb}{min}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Efficient Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(} \PY{p}{[}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gray}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZdl{} = }\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+si}{\PYZob{}mx\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PYZbs{}
+                  \PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bottom}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly standard deviation}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly mean of return}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Standart\PYZhy{}deviation Mean\PYZhy{}of\PYZhy{}return frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_25_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{w\PYZus{}} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{w\PYZus{}lst}\PY{p}{)}
+         \PY{n}{w\PYZus{}} \PY{o}{=} \PY{n}{w\PYZus{}}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{weight} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n}{w\PYZus{}}\PY{o}{.}\PY{n}{shape}\PY{p}{)}\PY{o}{/}\PY{n+nb}{len}\PY{p}{(}\PY{n}{w\PYZus{}}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{100}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distribution of the Weight of Optimal Portfolio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (out of 100}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_27_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    We can find that weight of optimal portfolio countains a great many
+extremely small value.
+
+    \hypertarget{simulate-efficient-frontier-via-random-weight-generated-by-normal-distribution}{%
+\subsection{Simulate efficient frontier via random weight generated by
+normal
+distribution}\label{simulate-efficient-frontier-via-random-weight-generated-by-normal-distribution}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{c+c1}{\PYZsh{} Monte Carlo method}
+         
+         \PY{c+c1}{\PYZsh{} random seed, keep the random number still}
+         \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{101}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} numbers of random portfolio}
+         \PY{n}{n\PYZus{}portfolio} \PY{o}{=}  \PY{n+nb}{int}\PY{p}{(}\PY{l+m+mf}{1e6}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} generate random weight from normal distribution}
+         \PY{n}{w\PYZus{}normal} \PY{o}{=} \PY{n+nb}{abs}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{n}{n\PYZus{}portfolio}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} uncomment this line and comment the previous line if you want uniform distribution}
+         \PY{c+c1}{\PYZsh{}w\PYZus{}normal = np.random.rand(n\PYZus{}portfolio).reshape(\PYZhy{}1, 10)}
+         
+         \PY{n}{w\PYZus{}normal} \PY{o}{/}\PY{o}{=} \PY{n}{w\PYZus{}normal}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{keepdims} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{w\PYZus{}normal}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}18}]:} (1000000, 10)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{w\PYZus{}normal\PYZus{}} \PY{o}{=} \PY{n}{w\PYZus{}normal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{weight} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{ones}\PY{p}{(}\PY{n}{w\PYZus{}normal\PYZus{}}\PY{o}{.}\PY{n}{shape}\PY{p}{)}\PY{o}{/}\PY{n}{w\PYZus{}normal\PYZus{}}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{100}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}normal\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,} \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distribution of the Weight generated by Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (out of 100}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_31_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Weight generated from normal distribution are not very likely to located
+on the optimal portfolio, because it doesn't countain enough extremely
+weight.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{c+c1}{\PYZsh{} calculate sigma and mu for random portfolio}
+         \PY{n}{Portfolios} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w\PYZus{}normal}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+         \PY{n}{Mean\PYZus{}normal} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{Std\PYZus{}normal} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{c+c1}{\PYZsh{} filter away points inside of the frontier}
+         \PY{n}{step} \PY{o}{=} \PY{l+m+mf}{0.1}
+         
+         \PY{n}{ind\PYZus{}} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{Std\PYZus{}normal} \PY{o}{==} \PY{n+nb}{min}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{p}{)} \PY{p}{)}
+         \PY{n}{sigma} \PY{o}{=} \PY{n}{Std\PYZus{}normal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{sigma\PYZus{}normal} \PY{o}{=} \PY{p}{[}\PY{n}{sigma}\PY{p}{]}
+         \PY{n}{normal\PYZus{}line\PYZus{}upper} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}normal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         \PY{n}{normal\PYZus{}line\PYZus{}lower} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}normal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         
+         \PY{k}{while} \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{p}{)}\PY{p}{:}
+             \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{n}{step}
+             \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)}  
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+             
+             \PY{k}{while} \PY{o+ow}{not} \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True} \PY{o+ow}{and}  \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{l+m+mf}{0.1}
+                 \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)} 
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+                 
+             \PY{k}{if}  \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True}\PY{p}{:}
+                 \PY{n}{sigma\PYZus{}normal}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{sigma}\PY{p}{)}
+                 \PY{n}{normal\PYZus{}line\PYZus{}upper}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{Mean\PYZus{}normal}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{normal\PYZus{}line\PYZus{}lower}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{Mean\PYZus{}normal}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{z} \PY{o}{=} \PY{l+m+mi}{2}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{n}{z}\PY{o}{*}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{z}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{ind} \PY{o}{=} \PY{n}{FrontierSigma}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n+nb}{min}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{p}{,} \PY{n}{Mean\PYZus{}normal}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{*}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coral}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Random Portfolio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}normal}\PY{p}{,} \PY{n}{normal\PYZus{}line\PYZus{}upper}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Simulated Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}normal}\PY{p}{,} \PY{n}{normal\PYZus{}line\PYZus{}lower}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(} \PY{p}{[}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}normal}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{l+m+mf}{1.5}\PY{o}{*}\PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gray}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZdl{} = }\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+si}{\PYZob{}mx\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PYZbs{}
+                  \PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bottom}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{1.4}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly standard deviation}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly mean of return}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monte Carlo Simulation \PYZhy{} Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_35_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    No surprise, the simulation fails to be perfectly located on the
+frontier.
+
+    \hypertarget{simulate-efficient-frontier-via-random-generated-by-weightreciprocal-normal-distribution}{%
+\subsection{Simulate efficient frontier via random generated by
+weightreciprocal normal
+distribution}\label{simulate-efficient-frontier-via-random-generated-by-weightreciprocal-normal-distribution}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{c+c1}{\PYZsh{} Monte Carlo method}
+         
+         \PY{c+c1}{\PYZsh{} random seed, keep the random number still}
+         \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{101}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} numbers of random portfolio}
+         \PY{n}{n\PYZus{}portfolio} \PY{o}{=}  \PY{n+nb}{int}\PY{p}{(}\PY{l+m+mf}{1e6}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} generate random weight from a reciprocal normal distribution}
+         \PY{n}{w\PYZus{}reciprocal} \PY{o}{=} \PY{n+nb}{abs}\PY{p}{(}\PY{l+m+mi}{1}\PY{o}{/}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{randn}\PY{p}{(}\PY{n}{n\PYZus{}portfolio}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{w\PYZus{}reciprocal} \PY{o}{/}\PY{o}{=} \PY{n}{w\PYZus{}reciprocal}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{keepdims} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{w\PYZus{}reciprocal}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:} (1000000, 10)
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{w\PYZus{}reciprocal\PYZus{}} \PY{o}{=} \PY{n}{w\PYZus{}reciprocal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}normal\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,}
+                  \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.7}\PY{p}{,} \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}reciprocal\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,}
+                  \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Reciprocal Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distribution of the Weight generated by Reciprocal Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (out of 100}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_39_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    A reciprocal of normal distribution can generate more extreme values
+than the original one.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{c+c1}{\PYZsh{} calculate sigma and mu for reciprocal random portfolio}
+         \PY{n}{Portfolios} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w\PYZus{}reciprocal}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+         \PY{n}{Mean\PYZus{}reciprocal} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{Std\PYZus{}reciprocal} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{c+c1}{\PYZsh{} filter away points inside of the frontier}
+         \PY{n}{step} \PY{o}{=} \PY{l+m+mf}{0.1}
+         
+         \PY{n}{ind\PYZus{}} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal} \PY{o}{==} \PY{n+nb}{min}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{p}{)} \PY{p}{)}
+         \PY{n}{sigma} \PY{o}{=} \PY{n}{Std\PYZus{}reciprocal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{sigma\PYZus{}reciprocal} \PY{o}{=} \PY{p}{[}\PY{n}{sigma}\PY{p}{]}
+         \PY{n}{reciprocal\PYZus{}line\PYZus{}upper} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}reciprocal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         \PY{n}{reciprocal\PYZus{}line\PYZus{}lower} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}reciprocal}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         
+         \PY{k}{while} \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{p}{)}\PY{p}{:}
+             \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{n}{step}
+             \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)}  
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+             
+             \PY{k}{while} \PY{o+ow}{not} \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True} \PY{o+ow}{and}  \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{l+m+mf}{0.1}
+                 \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)} 
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+                 
+             \PY{k}{if}  \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True}\PY{p}{:}
+                 \PY{n}{sigma\PYZus{}reciprocal}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{sigma}\PY{p}{)}
+                 \PY{n}{reciprocal\PYZus{}line\PYZus{}upper}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{Mean\PYZus{}reciprocal}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{reciprocal\PYZus{}line\PYZus{}lower}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{Mean\PYZus{}reciprocal}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{z} \PY{o}{=} \PY{l+m+mi}{2}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{n}{z}\PY{o}{*}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{z}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{ind} \PY{o}{=} \PY{n}{FrontierSigma}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n+nb}{min}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{p}{,} \PY{n}{Mean\PYZus{}reciprocal}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{*}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coral}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Random Portfolio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}reciprocal}\PY{p}{,} \PY{n}{reciprocal\PYZus{}line\PYZus{}upper}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Simulated Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}reciprocal}\PY{p}{,} \PY{n}{reciprocal\PYZus{}line\PYZus{}lower}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(} \PY{p}{[}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}reciprocal}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{l+m+mf}{1.5}\PY{o}{*}\PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gray}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZdl{} = }\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+si}{\PYZob{}mx\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PYZbs{}
+                  \PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bottom}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mf}{1.4}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly standard deviation}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly mean of return}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monte Carlo Simulation \PYZhy{} Reciprocal Normal Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_43_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{complementary-work-uniform-distribution}{%
+\subsection{Complementary Work : Uniform
+Distribution}\label{complementary-work-uniform-distribution}}
+
+Uniform distribution fails to outperform nornal distribution according
+to my experiment.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{c+c1}{\PYZsh{} Monte Carlo method}
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} random seed, keep the random number still}
+         \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{101}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} numbers of random portfolio}
+         \PY{n}{n\PYZus{}portfolio} \PY{o}{=}  \PY{n+nb}{int}\PY{p}{(}\PY{l+m+mf}{1e6}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} generate random weight from uniform distribution}
+         \PY{n}{w\PYZus{}uniform} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{n\PYZus{}portfolio}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+         
+         \PY{n}{w\PYZus{}uniform} \PY{o}{/}\PY{o}{=} \PY{n}{w\PYZus{}uniform}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{keepdims} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{w\PYZus{}uniform\PYZus{}} \PY{o}{=} \PY{n}{w\PYZus{}uniform}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}uniform\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,}
+                  \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distribution of the Weight generated by Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (out of 100}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} calculate sigma and mu for random portfolio}
+         \PY{n}{Portfolios} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w\PYZus{}uniform}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+         \PY{n}{Mean\PYZus{}uniform} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{Std\PYZus{}uniform} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} filter away points inside of the frontier}
+         \PY{n}{step} \PY{o}{=} \PY{l+m+mf}{0.1}
+         
+         \PY{n}{ind\PYZus{}} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{Std\PYZus{}uniform} \PY{o}{==} \PY{n+nb}{min}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{p}{)} \PY{p}{)}
+         \PY{n}{sigma} \PY{o}{=} \PY{n}{Std\PYZus{}uniform}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{sigma\PYZus{}uniform} \PY{o}{=} \PY{p}{[}\PY{n}{sigma}\PY{p}{]}
+         \PY{n}{uniform\PYZus{}line\PYZus{}upper} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}uniform}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         \PY{n}{uniform\PYZus{}line\PYZus{}lower} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}uniform}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         
+         \PY{k}{while} \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{p}{)}\PY{p}{:}
+             \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{n}{step}
+             \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)}  
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+             
+             \PY{k}{while} \PY{o+ow}{not} \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True} \PY{o+ow}{and}  \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{l+m+mf}{0.1}
+                 \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)} 
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+                 
+             \PY{k}{if}  \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True}\PY{p}{:}
+                 \PY{n}{sigma\PYZus{}uniform}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{sigma}\PY{p}{)}
+                 \PY{n}{uniform\PYZus{}line\PYZus{}upper}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{Mean\PYZus{}uniform}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{uniform\PYZus{}line\PYZus{}lower}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{Mean\PYZus{}uniform}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{n}{z} \PY{o}{=} \PY{l+m+mi}{2}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{n}{z}\PY{o}{*}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{z}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{ind} \PY{o}{=} \PY{n}{FrontierSigma}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n+nb}{min}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{p}{,} \PY{n}{Mean\PYZus{}uniform}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{*}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coral}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Random Portfolio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}uniform}\PY{p}{,} \PY{n}{uniform\PYZus{}line\PYZus{}upper}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Simulated Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}uniform}\PY{p}{,} \PY{n}{uniform\PYZus{}line\PYZus{}lower}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(} \PY{p}{[}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{l+m+mf}{1.5}\PY{o}{*}\PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gray}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZdl{} = }\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+si}{\PYZob{}mx\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PYZbs{}
+                  \PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bottom}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{1.4}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly standard deviation}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly mean of return}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monte Carlo Simulation \PYZhy{} Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_45_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_45_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{c+c1}{\PYZsh{} Monte Carlo method}
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} random seed, keep the random number still}
+         \PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{seed}\PY{p}{(}\PY{l+m+mi}{101}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} numbers of random portfolio}
+         \PY{n}{n\PYZus{}portfolio} \PY{o}{=}  \PY{n+nb}{int}\PY{p}{(}\PY{l+m+mf}{1e6}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} generate random weight from uniform distribution}
+         \PY{n}{w\PYZus{}uniform\PYZus{}r} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{n}{np}\PY{o}{.}\PY{n}{random}\PY{o}{.}\PY{n}{rand}\PY{p}{(}\PY{n}{n\PYZus{}portfolio}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+         
+         \PY{n}{w\PYZus{}uniform\PYZus{}r} \PY{o}{/}\PY{o}{=} \PY{n}{w\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{keepdims} \PY{o}{=} \PY{k+kc}{True}\PY{p}{)}
+         
+         \PY{n}{w\PYZus{}uniform\PYZus{}r\PYZus{}} \PY{o}{=} \PY{n}{w\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}uniform\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,}
+                  \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.7}\PY{p}{,} \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{w\PYZus{}uniform\PYZus{}r\PYZus{}}\PY{p}{,} \PY{n}{bins} \PY{o}{=} \PY{l+m+mi}{100}\PY{p}{,} \PY{n}{weights} \PY{o}{=} \PY{n}{weight}\PY{p}{,}
+                  \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.5}\PY{p}{,} \PY{n}{label} \PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Reciprocal Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Distribution of the Weight generated by Reciprocal Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frequency (out of 100}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{)}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Weight}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} calculate sigma and mu for random portfolio}
+         \PY{n}{Portfolios} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{IndPtf}\PY{o}{.}\PY{n}{values}\PY{p}{,} \PY{n}{w\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{T}\PY{p}{)}
+         \PY{n}{Mean\PYZus{}uniform\PYZus{}r} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         \PY{n}{Std\PYZus{}uniform\PYZus{}r} \PY{o}{=} \PY{n}{Portfolios}\PY{o}{.}\PY{n}{std}\PY{p}{(}\PY{n}{axis} \PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}}
+         \PY{c+c1}{\PYZsh{} filter away points inside of the frontier}
+         \PY{n}{step} \PY{o}{=} \PY{l+m+mf}{0.1}
+         
+         \PY{n}{ind\PYZus{}} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r} \PY{o}{==} \PY{n+nb}{min}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{)} \PY{p}{)}
+         \PY{n}{sigma} \PY{o}{=} \PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+         \PY{n}{sigma\PYZus{}uniform\PYZus{}r} \PY{o}{=} \PY{p}{[}\PY{n}{sigma}\PY{p}{]}
+         \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}upper} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}uniform\PYZus{}r}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}lower} \PY{o}{=} \PY{p}{[} \PY{n}{Mean\PYZus{}uniform\PYZus{}r}\PY{p}{[}\PY{n}{ind\PYZus{}}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{p}{]}
+         
+         \PY{k}{while} \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{)}\PY{p}{:}
+             \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{n}{step}
+             \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)}  
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+             
+             \PY{k}{while} \PY{o+ow}{not} \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True} \PY{o+ow}{and}  \PY{n}{sigma} \PY{o}{\PYZlt{}} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{sigma} \PY{o}{+}\PY{o}{=} \PY{l+m+mf}{0.1}
+                 \PY{n}{ind} \PY{o}{=} \PY{p}{(}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{sigma}\PY{p}{)} 
+                        \PY{o}{\PYZam{}} \PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{n}{sigma} \PY{o}{+} \PY{n}{step}\PY{p}{)}\PY{p}{)}
+                 
+             \PY{k}{if}  \PY{n}{ind}\PY{o}{.}\PY{n}{any}\PY{p}{(}\PY{p}{)} \PY{o}{==} \PY{k+kc}{True}\PY{p}{:}
+                 \PY{n}{sigma\PYZus{}uniform\PYZus{}r}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{sigma}\PY{p}{)}
+                 \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}upper}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{Mean\PYZus{}uniform\PYZus{}r}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}lower}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{Mean\PYZus{}uniform\PYZus{}r}\PY{p}{[} \PY{n}{ind} \PY{p}{]}\PY{p}{)}\PY{p}{)}
+                 
+         \PY{c+c1}{\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}\PYZsh{}   }
+         \PY{n}{z} \PY{o}{=} \PY{l+m+mi}{2}
+         \PY{n}{fig} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize} \PY{o}{=} \PY{p}{(}\PY{n}{z}\PY{o}{*}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{z}\PY{o}{*}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{ind} \PY{o}{=} \PY{n}{FrontierSigma}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{n+nb}{min}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{)}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{,} \PY{n}{Mean\PYZus{}uniform\PYZus{}r}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{*}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coral}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{alpha} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Random Portfolio}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{:}\PY{p}{]}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{FrontierSigma}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{p}{:}\PY{n}{ind}\PY{p}{]}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}uniform\PYZus{}r}\PY{p}{,} \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}upper}\PY{p}{,} 
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Simulated Minimum Standard Deviation Frontier}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{sigma\PYZus{}uniform\PYZus{}r}\PY{p}{,} \PY{n}{uniform\PYZus{}r\PYZus{}line\PYZus{}lower}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(} \PY{p}{[}\PY{n}{FrontierSigma}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{Std\PYZus{}uniform\PYZus{}r}\PY{p}{)}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{]}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,}
+                  \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{lw} \PY{o}{=} \PY{l+m+mf}{1.5}\PY{o}{*}\PY{n}{z}\PY{p}{,} \PY{n}{color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gray}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{text}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{,} \PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZdl{} = }\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZus{}}\PY{l+s+si}{\PYZob{}mx\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PYZbs{}
+                  \PY{o}{+}\PY{n+nb}{str}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{FrontierMeanReturn}\PY{p}{[}\PY{n}{ind}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{verticalalignment}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bottom}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylim}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mf}{1.4}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly standard deviation}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monthly mean of return}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Monte Carlo Simulation \PYZhy{} Reciprocal Uniform Distribution}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{best}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize} \PY{o}{=} \PY{l+m+mi}{7}\PY{o}{*}\PY{n}{z}\PY{p}{)}
+         \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_46_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_46_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
